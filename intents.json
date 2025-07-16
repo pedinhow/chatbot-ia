@@ -1,0 +1,44 @@
+{
+  "intents": [
+    {
+      "tag": "saudacao",
+      "patterns": ["Oi", "Olá", "E aí", "Bom dia", "Boa tarde", "Boa noite", "Oi, tudo bem?", "Como você está?", "Oi chatbot"],
+      "responses": ["Olá! Como posso ajudar você hoje?", "Oi! Em que posso te ajudar?", "Olá! Estou à disposição para te ajudar."]
+    },
+    {
+      "tag": "saldo",
+      "patterns": ["Qual é o meu saldo?", "Me diga meu saldo", "Quanto tenho na conta?", "Mostrar saldo", "Ver saldo", "Saldo bancário", "Quanto dinheiro eu tenho?", "Quero ver meu saldo"],
+      "responses": ["Seu saldo atual é de R$ 1.234,56.", "Você tem R$ 1.234,56 disponíveis.", "O saldo da sua conta é R$ 1.234,56."]
+    },
+    {
+      "tag": "transferencia",
+      "patterns": ["Quero transferir dinheiro", "Fazer uma transferência", "Transferir agora", "Preciso enviar dinheiro", "Como faço uma transferência?", "Transferência bancária", "Quero enviar dinheiro para alguém"],
+      "responses": ["Claro! Para qual conta você deseja transferir?", "Vamos lá. Me diga o número da conta de destino."]
+    },
+    {
+      "tag": "transferencia_valor",
+      "patterns": ["Conta 1234", "Para a conta 5678", "Transferir para 4321", "Enviar para conta 8888", "Número da conta é 9999"],
+      "responses": ["E qual o valor que você deseja transferir?", "Perfeito. Qual o valor da transferência?"]
+    },
+    {
+      "tag": "transferencia_confirmar",
+      "patterns": ["Transferir 100 reais", "Enviar 500", "Quero transferir 200", "Valor de 50 reais", "Transferência de 300", "Depositar 400 reais"],
+      "responses": ["Transferência realizada com sucesso! Precisa de mais alguma coisa?", "Prontinho! O valor foi transferido. Posso ajudar com mais algo?"]
+    },
+    {
+      "tag": "agradecimento",
+      "patterns": ["Obrigado", "Obrigada", "Valeu", "Muito obrigado", "Agradecido", "Show", "Top", "Perfeito"],
+      "responses": ["De nada! Sempre que precisar, estarei aqui.", "Imagina! Conte comigo.", "Disponha!"]
+    },
+    {
+      "tag": "despedida",
+      "patterns": ["Tchau", "Até logo", "Até mais", "Falou", "Adeus", "Vou sair", "Encerrar conversa"],
+      "responses": ["Até mais! Qualquer coisa, é só chamar.", "Tchau! Tenha um ótimo dia.", "Foi um prazer te ajudar. Até logo!"]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [],
+      "responses": ["Desculpe, não entendi sua pergunta. Pode reformular?", "Não consegui compreender. Você pode tentar de outra forma?", "Desculpa, não entendi bem o que você quis dizer."]
+    }
+  ]
+}
