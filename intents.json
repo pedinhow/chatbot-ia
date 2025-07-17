@@ -1,44 +1,134 @@
 {
   "intents": [
     {
-      "tag": "saudacao",
-      "patterns": ["Oi", "Olá", "E aí", "Bom dia", "Boa tarde", "Boa noite", "Oi, tudo bem?", "Como você está?", "Oi chatbot"],
-      "responses": ["Olá! Como posso ajudar você hoje?", "Oi! Em que posso te ajudar?", "Olá! Estou à disposição para te ajudar."]
+      "tag": "boas_vindas",
+      "patterns": ["Oi", "Olá", "Sou calouro", "Acabei de entrar", "Estou começando agora", "E aí"],
+      "responses": ["Olá! Seja bem-vindo(a) à UFERSA - Campus Mossoró! Em que posso te ajudar hoje?"]
     },
     {
-      "tag": "saldo",
-      "patterns": ["Qual é o meu saldo?", "Me diga meu saldo", "Quanto tenho na conta?", "Mostrar saldo", "Ver saldo", "Saldo bancário", "Quanto dinheiro eu tenho?", "Quero ver meu saldo"],
-      "responses": ["Seu saldo atual é de R$ 1.234,56.", "Você tem R$ 1.234,56 disponíveis.", "O saldo da sua conta é R$ 1.234,56."]
+      "tag": "missao",
+      "patterns": ["Qual é a missão da UFERSA?", "Missão da universidade", "Objetivo da UFERSA"],
+      "responses": ["A missão da UFERSA é formar cidadãos críticos, éticos e comprometidos com a transformação da sociedade."]
     },
     {
-      "tag": "transferencia",
-      "patterns": ["Quero transferir dinheiro", "Fazer uma transferência", "Transferir agora", "Preciso enviar dinheiro", "Como faço uma transferência?", "Transferência bancária", "Quero enviar dinheiro para alguém"],
-      "responses": ["Claro! Para qual conta você deseja transferir?", "Vamos lá. Me diga o número da conta de destino."]
+      "tag": "formas_ingresso",
+      "patterns": ["Como entro na UFERSA?", "Formas de ingresso", "É pelo ENEM?", "Quero estudar na UFERSA"],
+      "responses": [
+        "Você pode ingressar na UFERSA pelo ENEM/SISU, por recepção de curso, transferência externa ou portador de diploma.",
+        "A forma principal de ingresso na UFERSA é através do ENEM, usando o SISU."
+      ]
     },
     {
-      "tag": "transferencia_valor",
-      "patterns": ["Conta 1234", "Para a conta 5678", "Transferir para 4321", "Enviar para conta 8888", "Número da conta é 9999"],
-      "responses": ["E qual o valor que você deseja transferir?", "Perfeito. Qual o valor da transferência?"]
+      "tag": "sigaa",
+      "patterns": ["O que é SIGAA?", "Acessar o SIGAA", "Cadastro no SIGAA", "Login SIGAA"],
+      "responses": [
+        "O SIGAA é o sistema acadêmico da UFERSA. Você pode acessá-lo em http://sig.ufersa.edu.br com seu CPF e senha.",
+        "No SIGAA você acompanha disciplinas, notas, frequências e realiza matrículas."
+      ]
     },
     {
-      "tag": "transferencia_confirmar",
-      "patterns": ["Transferir 100 reais", "Enviar 500", "Quero transferir 200", "Valor de 50 reais", "Transferência de 300", "Depositar 400 reais"],
-      "responses": ["Transferência realizada com sucesso! Precisa de mais alguma coisa?", "Prontinho! O valor foi transferido. Posso ajudar com mais algo?"]
+      "tag": "matricula",
+      "patterns": ["Como faço matrícula?", "Reajuste de matrícula", "Quando me matriculo?", "Matrícula calouro"],
+      "responses": [
+        "A matrícula inicial dos calouros é automática. A partir do 2º semestre, você faz via SIGAA.",
+        "O período de matrícula está no calendário acadêmico, disponível no site da UFERSA."
+      ]
     },
     {
-      "tag": "agradecimento",
-      "patterns": ["Obrigado", "Obrigada", "Valeu", "Muito obrigado", "Agradecido", "Show", "Top", "Perfeito"],
-      "responses": ["De nada! Sempre que precisar, estarei aqui.", "Imagina! Conte comigo.", "Disponha!"]
+      "tag": "tcc",
+      "patterns": ["Como funciona o TCC?", "TCC é obrigatório?", "Tenho que fazer TCC?", "Trabalho de conclusão de curso"],
+      "responses": [
+        "Sim, o TCC é obrigatório e pode ser feito como monografia, artigo, relatório de estágio ou outro tipo previsto no curso.",
+        "O TCC é desenvolvido geralmente nos dois últimos períodos do curso. Converse com seu orientador."
+      ]
     },
     {
-      "tag": "despedida",
-      "patterns": ["Tchau", "Até logo", "Até mais", "Falou", "Adeus", "Vou sair", "Encerrar conversa"],
-      "responses": ["Até mais! Qualquer coisa, é só chamar.", "Tchau! Tenha um ótimo dia.", "Foi um prazer te ajudar. Até logo!"]
+      "tag": "cancelamento_vinculo",
+      "patterns": ["Quero sair da UFERSA", "Como cancelar matrícula", "Cancelar curso", "Encerrar vínculo"],
+      "responses": [
+        "Para cancelar seu vínculo com a UFERSA, vá à DRE com RG, CPF e o nada consta da biblioteca.",
+        "O cancelamento é feito presencialmente e exige documentação básica e regularização de pendências."
+      ]
+    },
+    {
+      "tag": "aproveitamento_disciplinas",
+      "patterns": ["Aproveitar disciplina", "Estudei antes", "Já cursei essa matéria", "Reconhecer disciplina"],
+      "responses": [
+        "Você pode solicitar aproveitamento de disciplinas no SIGAA, anexando histórico e ementas.",
+        "O pedido de aproveitamento passa por análise da coordenação do curso."
+      ]
+    },
+    {
+      "tag": "biblioteca",
+      "patterns": ["Como funciona a biblioteca?", "Posso pegar livro?", "Empréstimo de livro", "Cadastro na biblioteca"],
+      "responses": [
+        "Você pode pegar até 5 livros por 8 dias. Leve uma foto 3x4 e comprovante de matrícula para se cadastrar.",
+        "O acervo é aberto para consulta, e o empréstimo exige cadastro prévio na biblioteca."
+      ]
+    },
+    {
+      "tag": "frequencia",
+      "patterns": ["Quantas faltas posso ter?", "Faltas", "Frequência mínima", "Fiquei doente e faltei"],
+      "responses": [
+        "Você precisa ter no mínimo 75% de presença por disciplina. Se faltar muito, pode ser reprovado automaticamente.",
+        "A entrega de atestados deve ser feita na DRE ou no sistema, com justificativa formal."
+      ]
+    },
+    {
+      "tag": "programa_permanencia",
+      "patterns": ["Bolsa permanência", "Ajuda financeira", "Auxílio moradia", "Auxílio alimentação", "Programa da PROAC"],
+      "responses": [
+        "O Programa de Permanência Estudantil da UFERSA oferece auxílios para estudantes em situação de vulnerabilidade.",
+        "Você pode se inscrever nos auxílios alimentação, moradia, transporte e outros através da PROAC."
+      ]
+    },
+    {
+      "tag": "monitoria",
+      "patterns": ["Monitoria UFERSA", "Quero ser monitor", "Como participar da monitoria?", "Ajudar professor"],
+      "responses": [
+        "A monitoria é uma atividade extracurricular remunerada ou voluntária. Inscrições são feitas pelo SIGAA.",
+        "Informe-se com a coordenação do curso ou acesse os editais no site da PROGRAD."
+      ]
+    },
+    {
+      "tag": "atividades_extras",
+      "patterns": ["Tem extensão?", "Projetos de pesquisa", "Posso fazer estágio?", "Atividades fora da aula"],
+      "responses": [
+        "Sim, a UFERSA incentiva atividades como pesquisa, extensão, monitoria e estágios.",
+        "Essas atividades contam como horas complementares e enriquecem sua formação."
+      ]
+    },
+    {
+      "tag": "apoio_estudantil",
+      "patterns": ["Tem psicólogo?", "Setor pedagógico", "Posso falar com alguém?", "Ajuda emocional UFERSA"],
+      "responses": [
+        "Você pode procurar o setor pedagógico e o serviço de apoio psicológico estudantil na PROAC.",
+        "A UFERSA oferece suporte psicopedagógico e emocional. Fale com a assistência estudantil."
+      ]
+    },
+    {
+      "tag": "horarios",
+      "patterns": ["Que horas tem aula?", "Horário de aula", "Turno da UFERSA", "Tem aula de noite?"],
+      "responses": [
+        "As aulas na UFERSA podem ocorrer nos turnos matutino, vespertino e noturno, dependendo do curso.",
+        "Consulte os horários no SIGAA ou com a coordenação do seu curso."
+      ]
+    },
+    {
+      "tag": "contato",
+      "patterns": ["Contato da UFERSA", "Telefone da secretaria", "Falar com a coordenação", "E-mail da universidade"],
+      "responses": [
+        "Você pode encontrar os contatos no site oficial da UFERSA: www.ufersa.edu.br > Contato.",
+        "Os telefones e e-mails das coordenações estão disponíveis no portal institucional."
+      ]
     },
     {
       "tag": "fallback",
       "patterns": [],
-      "responses": ["Desculpe, não entendi sua pergunta. Pode reformular?", "Não consegui compreender. Você pode tentar de outra forma?", "Desculpa, não entendi bem o que você quis dizer."]
+      "responses": [
+        "Desculpe, não entendi sua pergunta. Tente perguntar algo como: 'Como faço matrícula?', 'O que é o SIGAA?', ou 'Como pedir bolsa?'.",
+        "Hmmm... não entendi bem. Você pode reformular sua dúvida ou perguntar sobre TCC, biblioteca, SIGAA, etc."
+      ]
     }
   ]
 }

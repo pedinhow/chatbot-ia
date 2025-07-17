@@ -2,47 +2,62 @@ import json
 import nltk
 import string
 import pickle
-import random
-from nltk.stem import PorterStemmer
+from nltk.stem import RSLPStemmer
+from nltk.corpus import stopwords
+from unidecode import unidecode
 
-nltk.download('punkt')
-
-stemmer = PorterStemmer()
-
-def preprocess(text):
-    tokens = nltk.word_tokenize(text.lower())
-    tokens = [stemmer.stem(t) for t in tokens if t not in string.punctuation]
-    return ' '.join(tokens)
-
-# Carregar intents, modelo e vetor
-with open('intents.json') as f:
-    data = json.load(f)
+# carregar modelo e vetor
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 with open('vectorizer.pkl', 'rb') as f:
     vectorizer = pickle.load(f)
 
-def get_response(user_input):
-    processed = preprocess(user_input)
-    X = vectorizer.transform([processed])
-    tag = model.predict(X)[0]
+# carregar intents
+with open('intents.json', encoding='utf-8') as f:
+    data = json.load(f)
 
-    # Se o modelo não reconhecer bem, usar fallback
-    proba = model.predict_proba(X).max()
-    if proba < 0.25:
-        tag = "fallback"
+# baixar recursos necessários
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('rslp')
 
+stemmer = RSLPStemmer()
+stop_words = set(stopwords.words('portuguese'))
+
+# mesma função de preprocessamento usada no train.py
+def preprocess(text):
+    text = unidecode(text.lower())
+    tokens = nltk.word_tokenize(text)
+    tokens = [stemmer.stem(t) for t in tokens if t not in stop_words and t not in string.punctuation]
+    return ' '.join(tokens)
+
+# função para encontrar resposta com base na tag
+def get_response(tag):
     for intent in data['intents']:
         if intent['tag'] == tag:
             return random.choice(intent['responses'])
-    return "Desculpe, não entendi."
+    return "Desculpe, algo deu errado na minha resposta."
 
-print("Chatbot: Olá! Digite 'sair' para encerrar.")
+import random
+
+print("🤖 Chatbot UFERSA iniciado! Digite 'sair' para encerrar.\n")
+
 while True:
     user_input = input("Você: ")
-    if user_input.lower() == "sair":
-        print("Chatbot: Até logo!")
+
+    if user_input.lower() == 'sair':
+        print("Chatbot: Até mais! Bons estudos na UFERSA.")
         break
 
-    resposta = get_response(user_input)
-    print("Chatbot:", resposta)
+    processed = preprocess(user_input)
+    vectorized = vectorizer.transform([processed])
+    proba = max(model.predict_proba(vectorized)[0])
+    tag = model.predict(vectorized)[0]
+
+    # print(f"[DEBUG] Confiança: {proba:.2f} | Tag: {tag}")  # opcional
+
+    if proba < 0.15:
+        print("Chatbot: Desculpe, não entendi sua pergunta. Pode reformular?")
+    else:
+        resposta = get_response(tag)
+        print("Chatbot:", resposta)

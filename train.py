@@ -1,49 +1,54 @@
 import json
 import nltk
 import string
-from nltk.stem import PorterStemmer
+import pickle
+from nltk.stem import RSLPStemmer
+from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-import pickle
+from unidecode import unidecode
 
-# baixar recursos do NLTK
+# baixar recursos
 nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('rslp')
 
-# inicializa stemmer para reduzir palavras às raízes
-stemmer = PorterStemmer()
+stemmer = RSLPStemmer()
+stop_words = set(stopwords.words('portuguese'))
 
-# função para pré-processar texto (tokenizar, stem, remover pontuação)
+# pré-processamento: acentos, minúsculo, stopwords, stem
 def preprocess(text):
-    tokens = nltk.word_tokenize(text.lower())
-    tokens = [stemmer.stem(t) for t in tokens if t not in string.punctuation]
+    text = unidecode(text.lower())
+    tokens = nltk.word_tokenize(text)
+    tokens = [stemmer.stem(t) for t in tokens if t not in stop_words and t not in string.punctuation]
     return ' '.join(tokens)
 
 # carregar dados
-with open('intents.json') as f:
+with open('intents.json', encoding='utf-8') as f:
     data = json.load(f)
 
 corpus = []
 labels = []
 
-# preparar dados para treinamento
+# processar frases
 for intent in data['intents']:
     for pattern in intent['patterns']:
         processed = preprocess(pattern)
         corpus.append(processed)
         labels.append(intent['tag'])
 
-# vetorização TF-IDF
-vectorizer = TfidfVectorizer()
+# vetorizar
+vectorizer = TfidfVectorizer(ngram_range=(1, 2))
 X = vectorizer.fit_transform(corpus)
 
-# modelo Naive Bayes
+# treinar modelo
 model = MultinomialNB()
 model.fit(X, labels)
 
-# salvando modelo e vetor
+# salvar arquivos
 with open('model.pkl', 'wb') as f:
     pickle.dump(model, f)
 with open('vectorizer.pkl', 'wb') as f:
     pickle.dump(vectorizer, f)
 
-print("Treinamento finalizado e modelo salvo!")
+print("✅ Treinamento finalizado com sucesso!")
