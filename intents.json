@@ -2,132 +2,266 @@
   "intents": [
     {
       "tag": "boas_vindas",
-      "patterns": ["Oi", "Olá", "Sou calouro", "Acabei de entrar", "Estou começando agora", "E aí"],
-      "responses": ["Olá! Seja bem-vindo(a) à UFERSA - Campus Mossoró! Em que posso te ajudar hoje?"]
+      "patterns": [
+        "Oi",
+        "Olá",
+        "Bom dia",
+        "Boa tarde",
+        "Sou calouro",
+        "Acabei de entrar na UFERSA",
+        "Estou começando agora",
+        "E aí, tudo bem?"
+      ],
+      "responses": [
+        "Olá! Seja muito bem-vindo(a) à Universidade Federal Rural do Semi-Árido (UFERSA)! Sou um assistente virtual e estou aqui para te ajudar com as principais dúvidas. Em que posso ser útil hoje?"
+      ]
     },
     {
       "tag": "missao",
-      "patterns": ["Qual é a missão da UFERSA?", "Missão da universidade", "Objetivo da UFERSA"],
-      "responses": ["A missão da UFERSA é formar cidadãos críticos, éticos e comprometidos com a transformação da sociedade."]
+      "patterns": [
+        "Qual é a missão da UFERSA?",
+        "Qual o propósito da universidade?",
+        "Missão da UFERSA",
+        "Qual o objetivo da UFERSA?"
+      ],
+      "responses": [
+        "A missão da UFERSA é produzir e difundir conhecimentos no campo da educação superior, com ênfase para a região semiárida brasileira, contribuindo para o exercício pleno da cidadania e preparando profissionais capazes de atender às demandas da sociedade."
+      ]
     },
     {
-      "tag": "formas_ingresso",
-      "patterns": ["Como entro na UFERSA?", "Formas de ingresso", "É pelo ENEM?", "Quero estudar na UFERSA"],
+      "tag": "campus",
+      "patterns": [
+        "Quais são os campus da UFERSA?",
+        "A UFERSA só tem em Mossoró?",
+        "Onde tem UFERSA?"
+      ],
       "responses": [
-        "Você pode ingressar na UFERSA pelo ENEM/SISU, por recepção de curso, transferência externa ou portador de diploma.",
-        "A forma principal de ingresso na UFERSA é através do ENEM, usando o SISU."
+        "A UFERSA possui quatro campus. O campus principal fica em Mossoró, e os outros estão nas cidades de Angicos, Caraúbas e Pau dos Ferros."
+      ]
+    },
+    {
+      "tag": "direitos_deveres",
+      "patterns": [
+        "Quais são meus direitos como aluno?",
+        "Quais são meus deveres?",
+        "O que eu posso e não posso fazer na faculdade?",
+        "Regras da universidade"
+      ],
+      "responses": [
+        "Como estudante, você tem direito à gratuidade no ensino de graduação e a participar de órgãos colegiados. Seus deveres incluem frequentar as aulas (mínimo de 75%), zelar pelo patrimônio da instituição e respeitar as normas da universidade."
       ]
     },
     {
       "tag": "sigaa",
-      "patterns": ["O que é SIGAA?", "Acessar o SIGAA", "Cadastro no SIGAA", "Login SIGAA"],
+      "patterns": [
+        "O que é o SIGAA?",
+        "Para que serve o SIGAA?",
+        "Como acesso o SIGAA?",
+        "Onde vejo minhas notas e faltas?"
+      ],
       "responses": [
-        "O SIGAA é o sistema acadêmico da UFERSA. Você pode acessá-lo em http://sig.ufersa.edu.br com seu CPF e senha.",
-        "No SIGAA você acompanha disciplinas, notas, frequências e realiza matrículas."
+        "O SIGAA é o sistema acadêmico onde você pode acessar notas, emitir histórico e declaração de vínculo, realizar sua matrícula a cada semestre, acessar turmas virtuais e muito mais. O acesso é pelo link: https://sigaa.ufersa.edu.br/sigaa/verTelaLogin.do. As matrículas para calouros são automáticas no primeiro semestre."
       ]
     },
     {
       "tag": "matricula",
-      "patterns": ["Como faço matrícula?", "Reajuste de matrícula", "Quando me matriculo?", "Matrícula calouro"],
+      "patterns": [
+        "Como faço matrícula nas disciplinas?",
+        "Quando me matriculo?",
+        "Matrícula para veteranos",
+        "Como funciona o ajuste de matrícula?"
+      ],
       "responses": [
-        "A matrícula inicial dos calouros é automática. A partir do 2º semestre, você faz via SIGAA.",
-        "O período de matrícula está no calendário acadêmico, disponível no site da UFERSA."
+        "A matrícula dos alunos ingressantes é automática no primeiro semestre. A partir do segundo semestre, você deve realizar sua matrícula em disciplinas via SIGAA, durante o período definido no Calendário Acadêmico. Fique atento aos prazos no calendário para não perder!"
       ]
     },
     {
-      "tag": "tcc",
-      "patterns": ["Como funciona o TCC?", "TCC é obrigatório?", "Tenho que fazer TCC?", "Trabalho de conclusão de curso"],
+      "tag": "trancamento_matricula",
+      "patterns": [
+        "Como trancar o curso?",
+        "Posso trancar a faculdade?",
+        "Trancamento de matrícula institucional",
+        "Preciso parar de estudar por um tempo"
+      ],
       "responses": [
-        "Sim, o TCC é obrigatório e pode ser feito como monografia, artigo, relatório de estágio ou outro tipo previsto no curso.",
-        "O TCC é desenvolvido geralmente nos dois últimos períodos do curso. Converse com seu orientador."
+        "Sim, você pode solicitar o trancamento de matrícula institucional a partir do segundo período. O pedido é feito pelo SIGAA e pode ser concedido por um período máximo de 3 semestres, consecutivos ou não. O período de trancamento não conta para o tempo de integralização do curso."
       ]
     },
     {
       "tag": "cancelamento_vinculo",
-      "patterns": ["Quero sair da UFERSA", "Como cancelar matrícula", "Cancelar curso", "Encerrar vínculo"],
+      "patterns": [
+        "Quero sair da UFERSA",
+        "Como cancelar o curso?",
+        "Não quero mais estudar na UFERSA",
+        "Cancelar vínculo institucional"
+      ],
       "responses": [
-        "Para cancelar seu vínculo com a UFERSA, vá à DRE com RG, CPF e o nada consta da biblioteca.",
-        "O cancelamento é feito presencialmente e exige documentação básica e regularização de pendências."
+        "O cancelamento do vínculo pode ser realizado diretamente pelo SIGAA. O caminho é: Portal Discente > Ensino > Cancelamento de Vinculo Institucional. Mesmo após o cancelamento, você ainda terá acesso ao sistema para emitir seu histórico."
       ]
     },
     {
-      "tag": "aproveitamento_disciplinas",
-      "patterns": ["Aproveitar disciplina", "Estudei antes", "Já cursei essa matéria", "Reconhecer disciplina"],
+      "tag": "avaliacao",
+      "patterns": [
+        "Como funciona a avaliação?",
+        "Como é calculada a média?",
+        "Qual a média para passar?",
+        "Sistema de notas"
+      ],
       "responses": [
-        "Você pode solicitar aproveitamento de disciplinas no SIGAA, anexando histórico e ementas.",
-        "O pedido de aproveitamento passa por análise da coordenação do curso."
+        "A avaliação é por disciplina e considera assiduidade (mínimo de 75% de frequência) e notas. São 3 avaliações parciais. Se a média aritmética delas for 7,0 ou superior, você está aprovado. Se a média for entre 3,5 e 6,9, você fará uma prova final. A média final para aprovação (com a prova final) deve ser no mínimo 5,0. Uma média parcial inferior a 3,5 resulta em reprovação automática."
+      ]
+    },
+    {
+      "tag": "frequencia_faltas",
+      "patterns": [
+        "Quantas faltas posso ter?",
+        "Qual a frequência mínima?",
+        "Fiquei doente e faltei, e agora?",
+        "Atestado médico abona falta?"
+      ],
+      "responses": [
+        "É obrigatório ter no mínimo 75% de frequência na carga horária de cada disciplina para não ser reprovado por falta. Atestados médicos com menos de 10 dias não abonam faltas, pois as ausências já estão previstas nos 25% que você pode faltar. Para afastamentos mais longos (a partir de 10 dias), você deve entregar o atestado na Divisão de Registro Escolar em até 3 dias úteis para ter direito a exercícios domiciliares."
       ]
     },
     {
       "tag": "biblioteca",
-      "patterns": ["Como funciona a biblioteca?", "Posso pegar livro?", "Empréstimo de livro", "Cadastro na biblioteca"],
+      "patterns": [
+        "Como funciona a biblioteca?",
+        "Como pegar um livro emprestado?",
+        "Serviços da biblioteca",
+        "O que é o SISBI?"
+      ],
       "responses": [
-        "Você pode pegar até 5 livros por 8 dias. Leve uma foto 3x4 e comprovante de matrícula para se cadastrar.",
-        "O acervo é aberto para consulta, e o empréstimo exige cadastro prévio na biblioteca."
+        "A UFERSA possui um Sistema de Bibliotecas (SISBI) com unidades nos quatro campi. Elas oferecem empréstimo de livros, acesso a bases de dados, ficha catalográfica, normalização de trabalhos, entre outros serviços. A Biblioteca Orlando Teixeira, no Campus Central, atende a toda a comunidade."
       ]
     },
     {
-      "tag": "frequencia",
-      "patterns": ["Quantas faltas posso ter?", "Faltas", "Frequência mínima", "Fiquei doente e faltei"],
+      "tag": "assistencia_estudantil",
+      "patterns": [
+        "Preciso de ajuda financeira",
+        "Tem bolsa auxílio?",
+        "Como funciona o auxílio moradia?",
+        "Quero saber sobre o Programa Permanência",
+        "O que a PROAE faz?"
+      ],
       "responses": [
-        "Você precisa ter no mínimo 75% de presença por disciplina. Se faltar muito, pode ser reprovado automaticamente.",
-        "A entrega de atestados deve ser feita na DRE ou no sistema, com justificativa formal."
+        "A Pró-Reitoria de Assuntos Estudantis (PROAE) é responsável pela assistência ao estudante. Existe o Programa Institucional Permanência, que oferece auxílios (alimentação, transporte, moradia, etc.) para estudantes em vulnerabilidade socioeconômica. Os editais são divulgados no site da UFERSA a cada semestre."
       ]
     },
     {
-      "tag": "programa_permanencia",
-      "patterns": ["Bolsa permanência", "Ajuda financeira", "Auxílio moradia", "Auxílio alimentação", "Programa da PROAC"],
+      "tag": "restaurante_universitario",
+      "patterns": [
+        "Como funciona o RU?",
+        "Qual o valor da refeição no RU?",
+        "Quem pode comer no Restaurante Universitário?",
+        "Almoço e jantar na faculdade"
+      ],
       "responses": [
-        "O Programa de Permanência Estudantil da UFERSA oferece auxílios para estudantes em situação de vulnerabilidade.",
-        "Você pode se inscrever nos auxílios alimentação, moradia, transporte e outros através da PROAC."
+        "O Restaurante Universitário (RU) oferece almoço e jantar para toda a comunidade acadêmica. O custo da refeição para estudantes de graduação é parcialmente subsidiado pela UFERSA. Para ter acesso, você precisa fazer sua carteirinha de usuário na PROAE."
+      ]
+    },
+    {
+      "tag": "apoio_psicologico",
+      "patterns": [
+        "Tem psicólogo na UFERSA?",
+        "Preciso de apoio emocional",
+        "Como agendar atendimento com psicólogo?",
+        "Serviço de psicologia"
+      ],
+      "responses": [
+        "Sim, a UFERSA oferece um serviço de psicologia para acolher e ouvir os estudantes. Os atendimentos podem ser individuais ou em grupo e devem ser agendados previamente pelo site da PROAE ou do seu campus."
+      ]
+    },
+    {
+      "tag": "tcc",
+      "patterns": [
+        "Como funciona o TCC?",
+        "O TCC é obrigatório?",
+        "Quais os tipos de TCC?",
+        "Trabalho de Conclusão de Curso"
+      ],
+      "responses": [
+        "Sim, o Trabalho de Conclusão de Curso (TCC) é um componente obrigatório. Ele tem como objetivo proporcionar uma experiência de pesquisa ou extensão. O formato pode ser monografia, artigo científico, relatório de estágio ou memorial, dependendo das diretrizes do seu curso."
       ]
     },
     {
       "tag": "monitoria",
-      "patterns": ["Monitoria UFERSA", "Quero ser monitor", "Como participar da monitoria?", "Ajudar professor"],
+      "patterns": [
+        "O que é monitoria?",
+        "Como posso ser monitor?",
+        "Monitoria tem bolsa?",
+        "Quero ajudar os professores"
+      ],
       "responses": [
-        "A monitoria é uma atividade extracurricular remunerada ou voluntária. Inscrições são feitas pelo SIGAA.",
-        "Informe-se com a coordenação do curso ou acesse os editais no site da PROGRAD."
+        "O Programa de Monitoria visa melhorar o ensino e despertar o interesse do aluno pela docência. O monitor exerce 12 horas de atividades semanais e pode receber uma bolsa auxílio. Você pode encontrar mais informações no site da PROGRAD ou com o professor da disciplina."
       ]
     },
     {
-      "tag": "atividades_extras",
-      "patterns": ["Tem extensão?", "Projetos de pesquisa", "Posso fazer estágio?", "Atividades fora da aula"],
+      "tag": "iniciacao_cientifica",
+      "patterns": [
+        "O que é iniciação científica?",
+        "Como participar de um projeto de pesquisa?",
+        "O que é PIBIC?",
+        "Quero ser pesquisador"
+      ],
       "responses": [
-        "Sim, a UFERSA incentiva atividades como pesquisa, extensão, monitoria e estágios.",
-        "Essas atividades contam como horas complementares e enriquecem sua formação."
+        "O Programa Institucional de Bolsas de Iniciação Científica (PIBIC/PICI) permite que você aprenda técnicas e métodos de pesquisa, orientado por um pesquisador qualificado. Isso estimula o pensamento científico e a criatividade. Fique de olho nos editais lançados pela PROPPG."
       ]
     },
     {
-      "tag": "apoio_estudantil",
-      "patterns": ["Tem psicólogo?", "Setor pedagógico", "Posso falar com alguém?", "Ajuda emocional UFERSA"],
+      "tag": "estagio",
+      "patterns": [
+        "Como funciona o estágio?",
+        "Estágio é obrigatório?",
+        "Qual a diferença de estágio obrigatório e não obrigatório?",
+        "Onde encontro vagas de estágio?"
+      ],
       "responses": [
-        "Você pode procurar o setor pedagógico e o serviço de apoio psicológico estudantil na PROAC.",
-        "A UFERSA oferece suporte psicopedagógico e emocional. Fale com a assistência estudantil."
+        "O estágio é uma atividade acadêmica no ambiente de trabalho. Ele pode ser **Obrigatório**, quando é um componente curricular indispensável para se formar, ou **Não Obrigatório**, uma atividade opcional que conta como horas complementares. No estágio não obrigatório, a empresa deve conceder bolsa-auxílio e auxílio transporte."
       ]
     },
     {
-      "tag": "horarios",
-      "patterns": ["Que horas tem aula?", "Horário de aula", "Turno da UFERSA", "Tem aula de noite?"],
+      "tag": "ouvidoria",
+      "patterns": [
+        "O que é a Ouvidoria?",
+        "Quando devo procurar a Ouvidoria?",
+        "Quero fazer uma reclamação",
+        "Quero fazer um elogio"
+      ],
       "responses": [
-        "As aulas na UFERSA podem ocorrer nos turnos matutino, vespertino e noturno, dependendo do curso.",
-        "Consulte os horários no SIGAA ou com a coordenação do seu curso."
+        "A Ouvidoria é um canal de comunicação entre você e a gestão da UFERSA. Você deve procurá-la após já ter tentado resolver a questão no setor responsável sem sucesso, ou se tiver ciência de alguma irregularidade. Ela também serve para enviar elogios. O atendimento é sigiloso."
       ]
     },
     {
       "tag": "contato",
-      "patterns": ["Contato da UFERSA", "Telefone da secretaria", "Falar com a coordenação", "E-mail da universidade"],
+      "patterns": [
+        "Contato da UFERSA",
+        "Telefone da secretaria",
+        "Falar com a coordenação do curso",
+        "Qual o e-mail da universidade?"
+      ],
       "responses": [
-        "Você pode encontrar os contatos no site oficial da UFERSA: www.ufersa.edu.br > Contato.",
-        "Os telefones e e-mails das coordenações estão disponíveis no portal institucional."
+        "Os contatos das coordenações de curso geralmente ficam localizadas nos prédios dos centros acadêmicos. Para contatos gerais, o melhor é consultar o site oficial: www.ufersa.edu.br."
+      ]
+    },
+    {
+      "tag": "agradecimento",
+      "patterns": [
+        "Obrigado",
+        "Valeu",
+        "Ajudou muito",
+        "Obrigada pela ajuda"
+      ],
+      "responses": [
+        "De nada! Se precisar de mais alguma coisa, é só perguntar. Bons estudos!"
       ]
     },
     {
       "tag": "fallback",
       "patterns": [],
       "responses": [
-        "Desculpe, não entendi sua pergunta. Tente perguntar algo como: 'Como faço matrícula?', 'O que é o SIGAA?', ou 'Como pedir bolsa?'.",
-        "Hmmm... não entendi bem. Você pode reformular sua dúvida ou perguntar sobre TCC, biblioteca, SIGAA, etc."
+        "Desculpe, não entendi sua pergunta. Você pode tentar perguntar de outra forma. Por exemplo: 'Como funciona a avaliação?' ou 'Quais auxílios para estudantes existem?'.",
+        "Hmmm... não tenho certeza se entendi. Poderia reformular? Estou aqui para ajudar com dúvidas sobre matrícula, bolsas, RU, TCC, biblioteca e outros assuntos da vida acadêmica na UFERSA."
       ]
     }
   ]
