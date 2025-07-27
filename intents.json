@@ -190,7 +190,8 @@
         "Como são as provas?",
         "Precisa de quanto para passar de ano?",
         "Cálculo da média final",
-        "fui para a final, como funciona?"
+        "fui para a final, como funciona?",
+        "Média"
       ],
       "responses": [
         "O sistema de avaliação é composto por 3 notas. Se sua média for 7.0 ou mais, você está aprovado. Se for entre 3.5 e 6.9, você fará uma prova final, e a nova média para passar precisará ser no mínimo 5.0. Se sua média parcial for menor que 3.5, você é reprovado automaticamente. Além disso, é preciso ter 75% de frequência."
@@ -584,6 +585,94 @@
       ],
       "image": "Mapa-UFERSA-Mossoró_Oeste_2017.jpg"
     },
+    {
+      "tag": "ufersa_app",
+      "patterns": [
+        "O que é o UfersaApp?",
+        "Como usar o app da UFERSA?",
+        "Tem aplicativo da universidade?",
+        "Baixar app da UFERSA",
+        "Aplicativo oficial da UFERSA",
+        "Aplicativo para alunos",
+        "App",
+        "Android",
+        "IOS"
+      ],
+      "responses": [
+        "O UfersaApp é o aplicativo oficial da UFERSA para dispositivos móveis. Ele permite acesso rápido a informações acadêmicas, como horários de aula, notas, frequência e avisos. Você pode baixá-lo gratuitamente na Play Store ou App Store procurando por 'UfersaApp'."
+      ]
+    },
+    {
+      "tag": "reposicao",
+      "patterns": [
+        "Faltei a prova, e agora?",
+        "Como funciona a reposição de prova?",
+        "Perdi a avaliação",
+        "Tem como repor uma prova?",
+        "Justificar falta na prova",
+        "Como remarcar uma avaliação?",
+        "Prova substitutiva",
+        "Reposição de prova",
+        "Tive um problema no dia da prova",
+        "Reposição",
+        "Repor"
+      ],
+      "responses": [
+        "Para solicitar uma reposição de prova na UFERSA, acesse o SIGAA e vá em: Ensino > Reposição de Avaliação. Lá, você informa o motivo (com ou sem documentos) e solicita a reposição. Mas atenção: o professor precisa já ter cadastrado uma data de reposição no sistema. Fique atento e converse com seu docente se necessário."
+      ]
+    },
+    {
+      "tag": "horarios",
+      "patterns": [
+        "Quais os horários das aulas?",
+        "Que horas começam as aulas?",
+        "Horário de aula",
+        "turnos da faculdade",
+        "Manhã, tarde ou noite?",
+        "Qual o horário das disciplinas?",
+        "Tempo das aulas",
+        "Duração das aulas",
+        "Horas",
+        "Horário"
+      ],
+      "responses": [
+        "As aulas na UFERSA seguem os turnos:\n- Manhã: 7h às 12h\n- Tarde: 13h às 18h\n- Noite: 18h30 às 22h\nVocê pode verificar os horários das suas disciplinas diretamente no SIGAA. Para entender as normas gerais sobre horários, acesse o site oficial da DRE: https://dre.ufersa.edu.br/horario-das-aulas"
+      ]
+    },
+    {
+      "tag": "horas_complementares",
+      "patterns": [
+        "O que são horas complementares?",
+        "Quantas horas complementares preciso?",
+        "Como conseguir horas complementares?",
+        "Atividades complementares",
+        "Como enviar horas complementares?",
+        "Como validar as horas complementares?",
+        "Atividades extracurriculares"
+    ],
+      "responses": [
+        "Horas complementares são atividades extracurriculares obrigatórias para a conclusão do curso. Você pode acumulá-las com eventos, cursos, palestras, monitoria, estágios, entre outros. A quantidade exigida varia por curso e pode ser consultada na coordenação. A solicitação de validação é feita no SIGAA, com envio dos comprovantes."
+    ]
+    },
+    {
+      "tag": "cardapio",
+      "patterns": [
+        "Qual o cardápio de hoje?",
+        "O que tem para comer no RU?",
+        "Cardápio do RU",
+        "Almoço de hoje na UFERSA",
+        "Jantar do RU",
+        "Quero ver o cardápio do RU",
+        "Menu do Restaurante Universitário",
+        "Comida de hoje",
+        "Refeição no bandejão",
+        "Cardápio",
+        "Proteína"
+    ],
+      "responses": [
+        "Você pode conferir o cardápio diário do Restaurante Universitário (RU) da UFERSA acessando o site oficial da PROAE: https://proae.ufersa.edu.br/cardapio. Outra opção prática é utilizar o UfersaApp, que também disponibiliza o cardápio atualizado todos os dias."
+    ]
+},
     {
       "tag": "fallback",
       "patterns": [],

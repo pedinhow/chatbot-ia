@@ -5,11 +5,9 @@ import pickle
 from nltk.stem import RSLPStemmer
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
-# MUDANÇA 1: Importar o novo modelo
 from sklearn.svm import LinearSVC
 from unidecode import unidecode
 
-# (O resto do código de setup continua igual...)
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('rslp')
@@ -37,7 +35,6 @@ for intent in data['intents']:
 vectorizer = TfidfVectorizer(ngram_range=(1, 2))
 X = vectorizer.fit_transform(corpus)
 
-# MUDANÇA 2: Usar o LinearSVC no lugar do MultinomialNB
 model = LinearSVC()
 model.fit(X, labels)
 
@@ -46,4 +43,4 @@ with open('model.pkl', 'wb') as f:
 with open('vectorizer.pkl', 'wb') as f:
     pickle.dump(vectorizer, f)
 
-print("✅ Treinamento com o novo modelo (LinearSVC) finalizado com sucesso!")
+print("✅ Treinamento finalizado com sucesso!")

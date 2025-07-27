@@ -10,7 +10,6 @@ from unidecode import unidecode
 
 app = Flask(__name__)
 
-# --- CARREGAR TODO O CHATBOT NA MEMÓRIA ---
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 with open('vectorizer.pkl', 'rb') as f:
@@ -31,12 +30,10 @@ def preprocess(text):
     return ' '.join(tokens)
 
 
-# --- FUNÇÃO MODIFICADA ---
 def get_response_from_tag(tag, intents_data):
     for intent in intents_data['intents']:
         if intent['tag'] == tag:
             response_text = random.choice(intent['responses'])
-            # Pega o nome da imagem se ele existir na intent
             image_file = intent.get('image', None)
             return {"answer": response_text, "image": image_file}
     return {"answer": "Desculpe, algo deu errado na minha resposta.", "image": None}
@@ -76,9 +73,7 @@ def home():
 @app.route("/get")
 def get_bot_response():
     user_text = request.args.get('msg')
-    # A função chatbot_response agora retorna um dicionário
     response_data = chatbot_response(user_text)
-    # Retornamos o dicionário inteiro como JSON
     return jsonify(response_data)
 
 
