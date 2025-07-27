@@ -7,10 +7,16 @@
         "Olá",
         "Bom dia",
         "Boa tarde",
+        "Boa noite",
+        "E aí, tudo bem?",
+        "Eae",
+        "Como vai?",
         "Sou calouro",
+        "Sou novo aqui",
         "Acabei de entrar na UFERSA",
         "Estou começando agora",
-        "E aí, tudo bem?"
+        "Preciso de ajuda",
+        "Informações para calouros"
       ],
       "responses": [
         "Olá! Seja muito bem-vindo(a) à Universidade Federal Rural do Semi-Árido (UFERSA)! Sou um assistente virtual e estou aqui para te ajudar com as principais dúvidas. Em que posso ser útil hoje?"
@@ -22,7 +28,10 @@
         "Qual é a missão da UFERSA?",
         "Qual o propósito da universidade?",
         "Missão da UFERSA",
-        "Qual o objetivo da UFERSA?"
+        "Qual o objetivo da UFERSA?",
+        "Para que serve a UFERSA?",
+        "O que a UFERSA faz?",
+        "Fale sobre a missão da universidade"
       ],
       "responses": [
         "A missão da UFERSA é produzir e difundir conhecimentos no campo da educação superior, com ênfase para a região semiárida brasileira, contribuindo para o exercício pleno da cidadania e preparando profissionais capazes de atender às demandas da sociedade."
@@ -33,7 +42,10 @@
       "patterns": [
         "Quais são os campus da UFERSA?",
         "A UFERSA só tem em Mossoró?",
-        "Onde tem UFERSA?"
+        "Onde tem UFERSA?",
+        "Quais as cidades que tem ufersa?",
+        "Quantos campus existem?",
+        "Fale sobre os campus"
       ],
       "responses": [
         "A UFERSA possui quatro campus. O campus principal fica em Mossoró, e os outros estão nas cidades de Angicos, Caraúbas e Pau dos Ferros."
@@ -45,7 +57,10 @@
         "Quais são meus direitos como aluno?",
         "Quais são meus deveres?",
         "O que eu posso e não posso fazer na faculdade?",
-        "Regras da universidade"
+        "Regras da universidade",
+        "Quais as normas da ufersa?",
+        "minhas obrigações como estudante",
+        "quais os direitos do discente?"
       ],
       "responses": [
         "Como estudante, você tem direito à gratuidade no ensino de graduação e a participar de órgãos colegiados. Seus deveres incluem frequentar as aulas (mínimo de 75%), zelar pelo patrimônio da instituição e respeitar as normas da universidade."
@@ -57,7 +72,11 @@
         "O que é o SIGAA?",
         "Para que serve o SIGAA?",
         "Como acesso o SIGAA?",
-        "Onde vejo minhas notas e faltas?"
+        "Onde vejo minhas notas e faltas?",
+        "Como ver minhas notas?",
+        "Como me inscrever em disciplinas no sigaa?",
+        "problemas com o sigaa",
+        "link do sigaa"
       ],
       "responses": [
         "O SIGAA é o sistema acadêmico onde você pode acessar notas, emitir histórico e declaração de vínculo, realizar sua matrícula a cada semestre, acessar turmas virtuais e muito mais. O acesso é pelo link: https://sigaa.ufersa.edu.br/sigaa/verTelaLogin.do. As matrículas para calouros são automáticas no primeiro semestre."
@@ -69,7 +88,11 @@
         "Como faço matrícula nas disciplinas?",
         "Quando me matriculo?",
         "Matrícula para veteranos",
-        "Como funciona o ajuste de matrícula?"
+        "Como funciona o ajuste de matrícula?",
+        "Período de matrícula",
+        "Como me inscrevo nas matérias?",
+        "Perdi o prazo da matrícula, e agora?",
+        "matrícula em cadeira"
       ],
       "responses": [
         "A matrícula dos alunos ingressantes é automática no primeiro semestre. A partir do segundo semestre, você deve realizar sua matrícula em disciplinas via SIGAA, durante o período definido no Calendário Acadêmico. Fique atento aos prazos no calendário para não perder!"
@@ -81,7 +104,11 @@
         "Como trancar o curso?",
         "Posso trancar a faculdade?",
         "Trancamento de matrícula institucional",
-        "Preciso parar de estudar por um tempo"
+        "Preciso parar de estudar por um tempo",
+        "quero trancar o período",
+        "como faço para trancar a matrícula?",
+        "trancamento de curso",
+        "pausar a faculdade"
       ],
       "responses": [
         "Sim, você pode solicitar o trancamento de matrícula institucional a partir do segundo período. O pedido é feito pelo SIGAA e pode ser concedido por um período máximo de 3 semestres, consecutivos ou não. O período de trancamento não conta para o tempo de integralização do curso."
@@ -93,7 +120,11 @@
         "Quero sair da UFERSA",
         "Como cancelar o curso?",
         "Não quero mais estudar na UFERSA",
-        "Cancelar vínculo institucional"
+        "Cancelar vínculo institucional",
+        "desistir do curso",
+        "cancelar minha vaga",
+        "como faço para largar a faculdade?",
+        "quero cancelar meu curso"
       ],
       "responses": [
         "O cancelamento do vínculo pode ser realizado diretamente pelo SIGAA. O caminho é: Portal Discente > Ensino > Cancelamento de Vinculo Institucional. Mesmo após o cancelamento, você ainda terá acesso ao sistema para emitir seu histórico."
@@ -105,7 +136,11 @@
         "Como funciona a avaliação?",
         "Como é calculada a média?",
         "Qual a média para passar?",
-        "Sistema de notas"
+        "Sistema de notas",
+        "Como são as provas?",
+        "Precisa de quanto para passar de ano?",
+        "Cálculo da média final",
+        "fui para a final, como funciona?"
       ],
       "responses": [
         "A avaliação é por disciplina e considera assiduidade (mínimo de 75% de frequência) e notas. São 3 avaliações parciais. Se a média aritmética delas for 7,0 ou superior, você está aprovado. Se a média for entre 3,5 e 6,9, você fará uma prova final. A média final para aprovação (com a prova final) deve ser no mínimo 5,0. Uma média parcial inferior a 3,5 resulta em reprovação automática."
@@ -117,7 +152,11 @@
         "Quantas faltas posso ter?",
         "Qual a frequência mínima?",
         "Fiquei doente e faltei, e agora?",
-        "Atestado médico abona falta?"
+        "Atestado médico abona falta?",
+        "limite de faltas",
+        "posso faltar quantos dias?",
+        "o que acontece se eu estourar as faltas?",
+        "justificar falta com atestado"
       ],
       "responses": [
         "É obrigatório ter no mínimo 75% de frequência na carga horária de cada disciplina para não ser reprovado por falta. Atestados médicos com menos de 10 dias não abonam faltas, pois as ausências já estão previstas nos 25% que você pode faltar. Para afastamentos mais longos (a partir de 10 dias), você deve entregar o atestado na Divisão de Registro Escolar em até 3 dias úteis para ter direito a exercícios domiciliares."
@@ -129,7 +168,11 @@
         "Como funciona a biblioteca?",
         "Como pegar um livro emprestado?",
         "Serviços da biblioteca",
-        "O que é o SISBI?"
+        "O que é o SISBI?",
+        "Como renovar um livro?",
+        "posso pegar quantos livros?",
+        "cadastro da biblioteca",
+        "horário da biblioteca"
       ],
       "responses": [
         "A UFERSA possui um Sistema de Bibliotecas (SISBI) com unidades nos quatro campi. Elas oferecem empréstimo de livros, acesso a bases de dados, ficha catalográfica, normalização de trabalhos, entre outros serviços. A Biblioteca Orlando Teixeira, no Campus Central, atende a toda a comunidade."
@@ -142,7 +185,11 @@
         "Tem bolsa auxílio?",
         "Como funciona o auxílio moradia?",
         "Quero saber sobre o Programa Permanência",
-        "O que a PROAE faz?"
+        "O que a PROAE faz?",
+        "como conseguir bolsa?",
+        "auxílio alimentação",
+        "auxílio transporte",
+        "ajuda de custo para estudantes"
       ],
       "responses": [
         "A Pró-Reitoria de Assuntos Estudantis (PROAE) é responsável pela assistência ao estudante. Existe o Programa Institucional Permanência, que oferece auxílios (alimentação, transporte, moradia, etc.) para estudantes em vulnerabilidade socioeconômica. Os editais são divulgados no site da UFERSA a cada semestre."
@@ -154,7 +201,11 @@
         "Como funciona o RU?",
         "Qual o valor da refeição no RU?",
         "Quem pode comer no Restaurante Universitário?",
-        "Almoço e jantar na faculdade"
+        "Almoço e jantar na faculdade",
+        "bandejão",
+        "quanto custa o almoço no ru?",
+        "horário do RU",
+        "como faço a carteirinha do RU?"
       ],
       "responses": [
         "O Restaurante Universitário (RU) oferece almoço e jantar para toda a comunidade acadêmica. O custo da refeição para estudantes de graduação é parcialmente subsidiado pela UFERSA. Para ter acesso, você precisa fazer sua carteirinha de usuário na PROAE."
@@ -166,7 +217,11 @@
         "Tem psicólogo na UFERSA?",
         "Preciso de apoio emocional",
         "Como agendar atendimento com psicólogo?",
-        "Serviço de psicologia"
+        "Serviço de psicologia",
+        "preciso de ajuda psicológica",
+        "saúde mental na ufersa",
+        "agendar com psicólogo",
+        "estou ansioso, com quem falo?"
       ],
       "responses": [
         "Sim, a UFERSA oferece um serviço de psicologia para acolher e ouvir os estudantes. Os atendimentos podem ser individuais ou em grupo e devem ser agendados previamente pelo site da PROAE ou do seu campus."
@@ -178,7 +233,11 @@
         "Como funciona o TCC?",
         "O TCC é obrigatório?",
         "Quais os tipos de TCC?",
-        "Trabalho de Conclusão de Curso"
+        "Trabalho de Conclusão de Curso",
+        "como escolher orientador de tcc?",
+        "prazo para entregar o tcc",
+        "defesa de tcc",
+        "sobre o trabalho final"
       ],
       "responses": [
         "Sim, o Trabalho de Conclusão de Curso (TCC) é um componente obrigatório. Ele tem como objetivo proporcionar uma experiência de pesquisa ou extensão. O formato pode ser monografia, artigo científico, relatório de estágio ou memorial, dependendo das diretrizes do seu curso."
@@ -190,7 +249,11 @@
         "O que é monitoria?",
         "Como posso ser monitor?",
         "Monitoria tem bolsa?",
-        "Quero ajudar os professores"
+        "Quero ajudar os professores",
+        "inscrição para monitoria",
+        "seleção de monitores",
+        "quanto ganha um monitor?",
+        "monitoria voluntária"
       ],
       "responses": [
         "O Programa de Monitoria visa melhorar o ensino e despertar o interesse do aluno pela docência. O monitor exerce 12 horas de atividades semanais e pode receber uma bolsa auxílio. Você pode encontrar mais informações no site da PROGRAD ou com o professor da disciplina."
@@ -202,7 +265,11 @@
         "O que é iniciação científica?",
         "Como participar de um projeto de pesquisa?",
         "O que é PIBIC?",
-        "Quero ser pesquisador"
+        "Quero ser pesquisador",
+        "como entrar em um projeto de pesquisa?",
+        "bolsa de iniciação científica",
+        "pivic",
+        "quero fazer pesquisa"
       ],
       "responses": [
         "O Programa Institucional de Bolsas de Iniciação Científica (PIBIC/PICI) permite que você aprenda técnicas e métodos de pesquisa, orientado por um pesquisador qualificado. Isso estimula o pensamento científico e a criatividade. Fique de olho nos editais lançados pela PROPPG."
@@ -214,7 +281,11 @@
         "Como funciona o estágio?",
         "Estágio é obrigatório?",
         "Qual a diferença de estágio obrigatório e não obrigatório?",
-        "Onde encontro vagas de estágio?"
+        "Onde encontro vagas de estágio?",
+        "como conseguir um estágio?",
+        "a faculdade ajuda a arrumar estágio?",
+        "horas de estágio",
+        "validar estágio"
       ],
       "responses": [
         "O estágio é uma atividade acadêmica no ambiente de trabalho. Ele pode ser **Obrigatório**, quando é um componente curricular indispensável para se formar, ou **Não Obrigatório**, uma atividade opcional que conta como horas complementares. No estágio não obrigatório, a empresa deve conceder bolsa-auxílio e auxílio transporte."
@@ -226,7 +297,11 @@
         "O que é a Ouvidoria?",
         "Quando devo procurar a Ouvidoria?",
         "Quero fazer uma reclamação",
-        "Quero fazer um elogio"
+        "Quero fazer um elogio",
+        "denúncia",
+        "sugestão",
+        "reclamar de um professor",
+        "como faço uma queixa formal?"
       ],
       "responses": [
         "A Ouvidoria é um canal de comunicação entre você e a gestão da UFERSA. Você deve procurá-la após já ter tentado resolver a questão no setor responsável sem sucesso, ou se tiver ciência de alguma irregularidade. Ela também serve para enviar elogios. O atendimento é sigiloso."
@@ -238,7 +313,11 @@
         "Contato da UFERSA",
         "Telefone da secretaria",
         "Falar com a coordenação do curso",
-        "Qual o e-mail da universidade?"
+        "Qual o e-mail da universidade?",
+        "telefone da prograd",
+        "email da minha coordenação",
+        "contato da biblioteca",
+        "número da ufersa"
       ],
       "responses": [
         "Os contatos das coordenações de curso geralmente ficam localizadas nos prédios dos centros acadêmicos. Para contatos gerais, o melhor é consultar o site oficial: www.ufersa.edu.br."
@@ -250,7 +329,11 @@
         "Obrigado",
         "Valeu",
         "Ajudou muito",
-        "Obrigada pela ajuda"
+        "Obrigada pela ajuda",
+        "Muito obrigado",
+        "Agradecido",
+        "Show, valeu!",
+        "Obrigadão"
       ],
       "responses": [
         "De nada! Se precisar de mais alguma coisa, é só perguntar. Bons estudos!"
