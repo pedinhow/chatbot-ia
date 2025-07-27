@@ -9,8 +9,10 @@
         "Boa tarde",
         "Boa noite",
         "E aí, tudo bem?",
+        "E ai",
         "Eae",
         "Como vai?",
+        "Tudo bem?",
         "Sou calouro",
         "Sou novo aqui",
         "Acabei de entrar na UFERSA",
@@ -19,7 +21,8 @@
         "Informações para calouros"
       ],
       "responses": [
-        "Olá! Seja muito bem-vindo(a) à Universidade Federal Rural do Semi-Árido (UFERSA)! Sou um assistente virtual e estou aqui para te ajudar com as principais dúvidas. Em que posso ser útil hoje?"
+        "Olá! Seja muito bem-vindo(a) à Universidade Federal Rural do Semi-Árido (UFERSA)! Sou um assistente virtual e estou aqui para te ajudar com as principais dúvidas. Em que posso ser útil hoje?",
+        "E aí, tudo bem? Seja bem-vindo(a) à UFERSA! Sou um assistente virtual pronto para te ajudar. Como posso ser útil?"
       ]
     },
     {
@@ -34,7 +37,7 @@
         "Fale sobre a missão da universidade"
       ],
       "responses": [
-        "A missão da UFERSA é produzir e difundir conhecimentos no campo da educação superior, com ênfase para a região semiárida brasileira, contribuindo para o exercício pleno da cidadania e preparando profissionais capazes de atender às demandas da sociedade."
+        "A missão da UFERSA é produzir e difundir conhecimentos no campo da educação superior, com ênfase para a região semiárida brasileira, contribuindo para o exercício pleno da cidadania e preparando profissionais capazes de atender demandas da sociedade."
       ]
     },
     {
@@ -43,12 +46,13 @@
         "Quais são os campus da UFERSA?",
         "A UFERSA só tem em Mossoró?",
         "Onde tem UFERSA?",
+        "Onde fica a UFERSA?",
         "Quais as cidades que tem ufersa?",
         "Quantos campus existem?",
         "Fale sobre os campus"
       ],
       "responses": [
-        "A UFERSA possui quatro campus. O campus principal fica em Mossoró, e os outros estão nas cidades de Angicos, Caraúbas e Pau dos Ferros."
+        "A UFERSA possui quatro campus. O campus principal fica em Mossoró, e os outros estão nas cidades de Angicos, Caraúbas e Pau dos Ferros. Você pode ver a localização do campus central em:\nhttps://ufersa.edu.br/localizacao/"
       ]
     },
     {
@@ -63,7 +67,7 @@
         "quais os direitos do discente?"
       ],
       "responses": [
-        "Como estudante, você tem direito à gratuidade no ensino de graduação e a participar de órgãos colegiados. Seus deveres incluem frequentar as aulas (mínimo de 75%), zelar pelo patrimônio da instituição e respeitar as normas da universidade."
+        "Como estudante, seus principais direitos são a gratuidade no ensino e a participação nos órgãos colegiados. Seus deveres incluem ter no mínimo 75% de frequência nas aulas, zelar pelo patrimônio da universidade e respeitar as normas do Regimento Geral. Para mais detalhes, consulte os documentos oficiais no site da UFERSA."
       ]
     },
     {
@@ -76,10 +80,11 @@
         "Como ver minhas notas?",
         "Como me inscrever em disciplinas no sigaa?",
         "problemas com o sigaa",
-        "link do sigaa"
+        "link do sigaa",
+        "portal do discente"
       ],
       "responses": [
-        "O SIGAA é o sistema acadêmico onde você pode acessar notas, emitir histórico e declaração de vínculo, realizar sua matrícula a cada semestre, acessar turmas virtuais e muito mais. O acesso é pelo link: https://sigaa.ufersa.edu.br/sigaa/verTelaLogin.do. As matrículas para calouros são automáticas no primeiro semestre."
+        "O SIGAA é o sistema acadêmico onde você pode acessar notas, emitir histórico e declaração de vínculo, realizar sua matrícula a cada semestre, acessar turmas virtuais e muito mais. O acesso é pelo link: https://sigaa.ufersa.edu.br/sigaa/verTelaLogin.do. A matrícula para calouros é automática no primeiro semestre."
       ]
     },
     {
@@ -92,10 +97,54 @@
         "Período de matrícula",
         "Como me inscrevo nas matérias?",
         "Perdi o prazo da matrícula, e agora?",
-        "matrícula em cadeira"
+        "matrícula em cadeira",
+        "datas da matrícula"
       ],
       "responses": [
-        "A matrícula dos alunos ingressantes é automática no primeiro semestre. A partir do segundo semestre, você deve realizar sua matrícula em disciplinas via SIGAA, durante o período definido no Calendário Acadêmico. Fique atento aos prazos no calendário para não perder!"
+        "A matrícula inicial dos calouros é automática. A partir do segundo semestre, você mesmo deve realizar sua matrícula em disciplinas via SIGAA, durante o período definido no Calendário Acadêmico. É muito importante ficar atento aos prazos!"
+      ]
+    },
+    {
+      "tag": "calendario_academico",
+      "patterns": [
+        "Onde vejo o calendário acadêmico?",
+        "Quais as datas importantes do semestre?",
+        "Quando começam as aulas?",
+        "Quando termina o período?",
+        "prazo de matrícula",
+        "quando é a semana de provas?",
+        "feriados acadêmicos"
+      ],
+      "responses": [
+        "Você encontra todas as datas importantes, como períodos de matrícula, trancamento e início/fim das aulas, no Calendário Acadêmico. Ele geralmente fica disponível no site da UFERSA, no menu 'Graduação'."
+      ]
+    },
+    {
+      "tag": "carteirinha_estudantil",
+      "patterns": [
+        "Como faço a carteirinha de estudante?",
+        "Onde pego minha carteirinha?",
+        "ID estudantil",
+        "Carteirinha de estudante",
+        "DNE"
+      ],
+      "responses": [
+        "A carteirinha de estudante da Ufersa, também conhecida como Documento Nacional do Estudante (DNE), é emitida pelo Diretório Central dos Estudantes (DCE) da universidade. Esse documento é válido em todo o território nacional e garante o acesso à meia-entrada em eventos artísticos, culturais e esportivos, além de outros benefícios. Para solicitar a carteirinha, os estudantes da Ufersa devem procurar o DCE da universidade"
+      ]
+    },
+    {
+      "tag": "atividades_esportivas",
+      "patterns": [
+        "Tem esporte na ufersa?",
+        "Quais esportes posso praticar?",
+        "Como usar a piscina?",
+        "Atividades esportivas",
+        "Onde fica o parque esportivo?",
+        "academia",
+        "time da ufersa"
+      ],
+      "responses": [
+        "Sim! O parque esportivo da UFERSA em Mossoró é composto por ginásio, piscina, campo de futebol e pista de atletismo. Atualmente, oferece práticas como futebol, natação, vôlei, basquete, handebol, futsal, jiu-jitsu, karatê, judô, boxe, capoeira e hidroginástica. Para utilizar os espaços, entre em contato com a Pró-Reitoria de Assuntos Estudantis (PROAE)."
       ]
     },
     {
@@ -111,7 +160,7 @@
         "pausar a faculdade"
       ],
       "responses": [
-        "Sim, você pode solicitar o trancamento de matrícula institucional a partir do segundo período. O pedido é feito pelo SIGAA e pode ser concedido por um período máximo de 3 semestres, consecutivos ou não. O período de trancamento não conta para o tempo de integralização do curso."
+        "A partir do segundo período você pode solicitar o trancamento de matrícula pelo SIGAA. O trancamento pode ser concedido por até 3 semestres (consecutivos ou não) e esse tempo não conta para o prazo de conclusão do seu curso."
       ]
     },
     {
@@ -127,13 +176,14 @@
         "quero cancelar meu curso"
       ],
       "responses": [
-        "O cancelamento do vínculo pode ser realizado diretamente pelo SIGAA. O caminho é: Portal Discente > Ensino > Cancelamento de Vinculo Institucional. Mesmo após o cancelamento, você ainda terá acesso ao sistema para emitir seu histórico."
+        "Você pode solicitar o cancelamento do seu vínculo com a universidade diretamente pelo SIGAA. O caminho é: Portal do Discente > Ensino > Cancelamento de Vínculo Institucional."
       ]
     },
     {
       "tag": "avaliacao",
       "patterns": [
         "Como funciona a avaliação?",
+        "Como funciona a prova?",
         "Como é calculada a média?",
         "Qual a média para passar?",
         "Sistema de notas",
@@ -143,7 +193,7 @@
         "fui para a final, como funciona?"
       ],
       "responses": [
-        "A avaliação é por disciplina e considera assiduidade (mínimo de 75% de frequência) e notas. São 3 avaliações parciais. Se a média aritmética delas for 7,0 ou superior, você está aprovado. Se a média for entre 3,5 e 6,9, você fará uma prova final. A média final para aprovação (com a prova final) deve ser no mínimo 5,0. Uma média parcial inferior a 3,5 resulta em reprovação automática."
+        "O sistema de avaliação é composto por 3 notas. Se sua média for 7.0 ou mais, você está aprovado. Se for entre 3.5 e 6.9, você fará uma prova final, e a nova média para passar precisará ser no mínimo 5.0. Se sua média parcial for menor que 3.5, você é reprovado automaticamente. Além disso, é preciso ter 75% de frequência."
       ]
     },
     {
@@ -159,7 +209,7 @@
         "justificar falta com atestado"
       ],
       "responses": [
-        "É obrigatório ter no mínimo 75% de frequência na carga horária de cada disciplina para não ser reprovado por falta. Atestados médicos com menos de 10 dias não abonam faltas, pois as ausências já estão previstas nos 25% que você pode faltar. Para afastamentos mais longos (a partir de 10 dias), você deve entregar o atestado na Divisão de Registro Escolar em até 3 dias úteis para ter direito a exercícios domiciliares."
+        "É obrigatório ter no mínimo 75% de frequência em cada disciplina. Se ultrapassar os 25% de faltas, você será reprovado. Atestados médicos com menos de 10 dias não abonam faltas, mas atestados mais longos, se entregues na Divisão de Registro Escolar em até 3 dias úteis, podem dar direito a exercícios domiciliares."
       ]
     },
     {
@@ -172,10 +222,12 @@
         "Como renovar um livro?",
         "posso pegar quantos livros?",
         "cadastro da biblioteca",
-        "horário da biblioteca"
+        "horário da biblioteca",
+        "pegar livro",
+        "devolver livro"
       ],
       "responses": [
-        "A UFERSA possui um Sistema de Bibliotecas (SISBI) com unidades nos quatro campi. Elas oferecem empréstimo de livros, acesso a bases de dados, ficha catalográfica, normalização de trabalhos, entre outros serviços. A Biblioteca Orlando Teixeira, no Campus Central, atende a toda a comunidade."
+        "A UFERSA possui o Sistema de Bibliotecas (SISBI) nos quatro campi. Elas oferecem empréstimo de livros, acesso a bases de dados, auxílio para normalização de trabalhos acadêmicos (ABNT), entre outros serviços. A biblioteca principal de Mossoró é a Orlando Teixeira."
       ]
     },
     {
@@ -189,10 +241,11 @@
         "como conseguir bolsa?",
         "auxílio alimentação",
         "auxílio transporte",
-        "ajuda de custo para estudantes"
+        "ajuda de custo para estudantes",
+        "sou de baixa renda, preciso de ajuda"
       ],
       "responses": [
-        "A Pró-Reitoria de Assuntos Estudantis (PROAE) é responsável pela assistência ao estudante. Existe o Programa Institucional Permanência, que oferece auxílios (alimentação, transporte, moradia, etc.) para estudantes em vulnerabilidade socioeconômica. Os editais são divulgados no site da UFERSA a cada semestre."
+        "A Pró-Reitoria de Assuntos Estudantis (PROAE) cuida da assistência ao estudante. Através do Programa Permanência, ela oferece auxílios como moradia, alimentação e transporte para alunos em situação de vulnerabilidade. Fique de olho nos editais lançados no site da UFERSA a cada semestre."
       ]
     },
     {
@@ -208,7 +261,7 @@
         "como faço a carteirinha do RU?"
       ],
       "responses": [
-        "O Restaurante Universitário (RU) oferece almoço e jantar para toda a comunidade acadêmica. O custo da refeição para estudantes de graduação é parcialmente subsidiado pela UFERSA. Para ter acesso, você precisa fazer sua carteirinha de usuário na PROAE."
+        "O Restaurante Universitário (RU) oferece almoço e jantar com preço subsidiado para os estudantes de graduação. Para ter acesso, você precisa solicitar sua carteira de usuário na PROAE ou na coordenação de assuntos estudantis do seu campus. Dúvidas sobre valores, horários e formas de pagamentos no link: https://proae.ufersa.edu.br/restaurante-universitario/"
       ]
     },
     {
@@ -221,10 +274,11 @@
         "preciso de ajuda psicológica",
         "saúde mental na ufersa",
         "agendar com psicólogo",
+        "Me sinto triste com a faculdade",
         "estou ansioso, com quem falo?"
       ],
       "responses": [
-        "Sim, a UFERSA oferece um serviço de psicologia para acolher e ouvir os estudantes. Os atendimentos podem ser individuais ou em grupo e devem ser agendados previamente pelo site da PROAE ou do seu campus."
+        "A UFERSA oferece um serviço de psicologia para acolher e ouvir os estudantes. Os atendimentos são gratuitos e podem ser agendados previamente pelo site da PROAE ou do seu campus."
       ]
     },
     {
@@ -237,10 +291,11 @@
         "como escolher orientador de tcc?",
         "prazo para entregar o tcc",
         "defesa de tcc",
-        "sobre o trabalho final"
+        "sobre o trabalho final",
+        "como apresentar o tcc?"
       ],
       "responses": [
-        "Sim, o Trabalho de Conclusão de Curso (TCC) é um componente obrigatório. Ele tem como objetivo proporcionar uma experiência de pesquisa ou extensão. O formato pode ser monografia, artigo científico, relatório de estágio ou memorial, dependendo das diretrizes do seu curso."
+        "O Trabalho de Conclusão de Curso (TCC) é um componente curricular obrigatório. O objetivo é proporcionar uma experiência em pesquisa ou extensão. O formato varia de acordo com o curso, podendo ser uma monografia, artigo científico, relatório de estágio ou memorial."
       ]
     },
     {
@@ -256,7 +311,7 @@
         "monitoria voluntária"
       ],
       "responses": [
-        "O Programa de Monitoria visa melhorar o ensino e despertar o interesse do aluno pela docência. O monitor exerce 12 horas de atividades semanais e pode receber uma bolsa auxílio. Você pode encontrar mais informações no site da PROGRAD ou com o professor da disciplina."
+        "A monitoria é um programa para auxiliar outros alunos em uma disciplina, sob a orientação de um professor. É uma ótima forma de aprofundar seus conhecimentos e pode despertar o interesse pela docência. Existem vagas com bolsa (remuneradas) e voluntárias. Fique de olho nos editais da PROGRAD."
       ]
     },
     {
@@ -272,7 +327,7 @@
         "quero fazer pesquisa"
       ],
       "responses": [
-        "O Programa Institucional de Bolsas de Iniciação Científica (PIBIC/PICI) permite que você aprenda técnicas e métodos de pesquisa, orientado por um pesquisador qualificado. Isso estimula o pensamento científico e a criatividade. Fique de olho nos editais lançados pela PROPPG."
+        "A Iniciação Científica (IC) é um programa que permite ao aluno de graduação participar de projetos de pesquisa, aprendendo técnicas e métodos científicos com a orientação de um pesquisador. Existem programas como PIBIC, PICI e PIBITI. Fique atento aos editais da Pró-Reitoria de Pesquisa e Pós-Graduação (PROPPG)."
       ]
     },
     {
@@ -288,7 +343,7 @@
         "validar estágio"
       ],
       "responses": [
-        "O estágio é uma atividade acadêmica no ambiente de trabalho. Ele pode ser **Obrigatório**, quando é um componente curricular indispensável para se formar, ou **Não Obrigatório**, uma atividade opcional que conta como horas complementares. No estágio não obrigatório, a empresa deve conceder bolsa-auxílio e auxílio transporte."
+        "O estágio é uma atividade no ambiente de trabalho para preparar você para a vida profissional. Ele pode ser OBRIGATÓRIO, quando exigido para se formar, ou NÃO OBRIGATÓRIO, como atividade opcional. No estágio não obrigatório, a empresa deve te oferecer uma bolsa-auxílio e auxílio-transporte."
       ]
     },
     {
@@ -304,7 +359,7 @@
         "como faço uma queixa formal?"
       ],
       "responses": [
-        "A Ouvidoria é um canal de comunicação entre você e a gestão da UFERSA. Você deve procurá-la após já ter tentado resolver a questão no setor responsável sem sucesso, ou se tiver ciência de alguma irregularidade. Ela também serve para enviar elogios. O atendimento é sigiloso."
+        "A Ouvidoria é seu canal direto de comunicação com a gestão da UFERSA. Você deve procurá-la para fazer reclamações, denúncias, sugestões ou elogios, especialmente se já tentou resolver o problema em outro setor e não conseguiu. O atendimento é sigiloso."
       ]
     },
     {
@@ -320,7 +375,7 @@
         "número da ufersa"
       ],
       "responses": [
-        "Os contatos das coordenações de curso geralmente ficam localizadas nos prédios dos centros acadêmicos. Para contatos gerais, o melhor é consultar o site oficial: www.ufersa.edu.br."
+        "Os contatos das coordenações de curso e outros setores podem ser encontrados no site oficial da UFERSA: www.ufersa.edu.br."
       ]
     },
     {
@@ -333,17 +388,207 @@
         "Muito obrigado",
         "Agradecido",
         "Show, valeu!",
+        "Entendi",
+        "Entendido",
+        "Entendi, obrigado",
+        "Saquei",
         "Obrigadão"
       ],
       "responses": [
-        "De nada! Se precisar de mais alguma coisa, é só perguntar. Bons estudos!"
+        "De nada! Se precisar de mais alguma coisa, é só perguntar. Bons estudos!",
+        "Disponha! Se tiver outra dúvida, pode mandar.",
+        "Que bom que ajudei! Precisando, estarei por aqui."
       ]
+    },
+    {
+      "tag": "wi-fi",
+      "patterns": [
+        "Como acessar o wi-fi da UFERSA?",
+        "Como usar o wi-fi?",
+        "Como usar o wifi?",
+        "Qual a senha do wi-fi?",
+        "Qual a senha do wifi?",
+        "wi-fi",
+        "wifi",
+        "WifiUfersa",
+        "Acesso ao wi-fi",
+        "Internet",
+        "Acessar a internet",
+        "Usar internet"
+      ],
+      "responses": [
+        "Você pode acessar a rede Wi-Fi nos Campi da UFERSA de duas formas:\n\n1. Rede UFERSA: https://sutic.ufersa.edu.br/wifiufersa/\n2. Rede Eduroam (recomendada): https://sutic.ufersa.edu.br/eduroam/"
+      ]
+    },
+    {
+      "tag": "localizacao_biblioteca",
+      "patterns": [
+        "Onde fica a biblioteca?",
+        "Como chego na biblioteca?",
+        "Qual o número da biblioteca no mapa?",
+        "Localização da Biblioteca Central",
+        "Onde é a biblioteca central?",
+        "Qual prédio é a biblioteca?"
+      ],
+      "responses": [
+        "A Biblioteca Central Orlando Teixeira fica no Lado Leste do campus, é o prédio de número 1 no mapa."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg"
+    },
+    {
+      "tag": "localizacao_reitoria",
+      "patterns": [
+        "Onde fica a reitoria?",
+        "Qual a localização da reitoria?",
+        "Prédio da reitoria",
+        "Como chegar na reitoria?",
+        "Onde é a reitoria?"
+      ],
+      "responses": [
+        "A Reitoria fica no Lado Leste do campus, é o prédio de número 2 no mapa."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg"
+    },
+    {
+      "tag": "localizacao_ru",
+      "patterns": [
+        "Onde fica o RU?",
+        "Como chego no RU?",
+        "Local do RU",
+        "Onde é o Restaurante Universitário?",
+        "Como chego no bandejão?",
+        "Localização do RU",
+        "Onde eu almoço?",
+        "Onde tem RU?"
+      ],
+      "responses": [
+        "O Restaurante Universitário (R.U.) fica no Lado Leste no prédio 11."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg"
+    },
+    {
+      "tag": "localizacao_proppg",
+      "patterns": [
+        "Onde fica a PROPPG?",
+        "Pró-Reitoria de Pesquisa e Pós-Graduação",
+        "Prédio da PROPPG",
+        "Onde é a proppg?"
+      ],
+      "responses": [
+        "A PROPPG (Pró-Reitoria de Pesquisa e Pós-Graduação) fica no Lado Leste, no prédio de número 27."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg"
+    },
+    {
+      "tag": "localizacao_central_aulas",
+      "patterns": [
+        "Onde ficam as centrais de aulas?",
+        "Central de aulas",
+        "Onde fica a central de aulas?",
+        "Como chegar na central de aulas?",
+        "Central de aulas I",
+        "Central de aulas II",
+        "Central de aulas III",
+        "Central de aulas IV",
+        "Central de aulas V",
+        "Central de aulas VI",
+        "Central de aulas VII",
+        "Onde tenho aula?",
+        "Onde ficam os pavilhões?"
+      ],
+      "responses": [
+        "Existem várias Centrais de Aulas! No Lado Leste, você encontra as centrais III (nº 16), IV (nº 12), V (nº 26), VI (nº 20) e VII (nº 18). Já no Lado Oeste, ficam a Central de Aulas I (nº 8) e a II (nº 15). Verifique no seu horário qual é a sua."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg",
+      "image": "Mapa-UFERSA-Mossoró_Oeste_2017.jpg"
+    },
+    {
+      "tag": "localizacao_dcv",
+      "patterns": [
+        "Onde fica o DCV?",
+        "Departamento de Ciências Vegetais",
+        "Prédio do DCV",
+        "Como chego no DCV?",
+        "Qual o prédio do DCV?"
+      ],
+      "responses": [
+        "O Departamento de Ciências Vegetais (DCV) fica no Lado Leste, no prédio de número 14."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg"
+    },
+    {
+      "tag": "localizacao_dcen",
+      "patterns": [
+        "Onde fica o DCEN?",
+        "Departamento de Ciências Exatas e Naturais",
+        "Prédio do DCEN",
+        "Como chegar no DCEN?"
+      ],
+      "responses": [
+        "O Departamento de Ciências Exatas e Naturais (DCEN) fica no Lado Leste, no prédio de número 25."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg"
+    },
+    {
+      "tag": "localizacao_dcan",
+      "patterns": [
+        "Onde fica o DCAN?",
+        "Departamento de Ciências Animais",
+        "Prédio do DCAN",
+        "Como ir para o DCAN?"
+      ],
+      "responses": [
+        "Os prédios do Departamento de Ciências Animais (DCAN) ficam no Lado Oeste. O DCAN I é o nº 4, o DCAN II é o nº 5, e os Laboratórios do DCAN são o nº 10."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Oeste_2017.jpg"
+    },
+    {
+      "tag": "localizacao_hovet",
+      "patterns": [
+        "Onde fica o HOVET?",
+        "Hospital Veterinário",
+        "Como chego no hospital veterinário?",
+        "Como chego no HOVET?",
+        "Local do hospital veterinário"
+      ],
+      "responses": [
+        "O Hospital Veterinário (HOVET) fica no Lado Oeste do campus, é o prédio de número 1 no mapa."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Oeste_2017.jpg"
+    },
+    {
+      "tag": "localizacao_guarita",
+      "patterns": [
+        "Onde ficam as guaritas?",
+        "Entrada do campus",
+        "Portaria da ufersa",
+        "Como entro na ufersa?",
+        "Entrada da UFERSA"
+      ],
+      "responses": [
+        "Existem duas entradas principais. A Guarita Leste (nº 31 no mapa do Lado Leste) e a Guarita Oeste (próxima ao prédio 11 no mapa do Lado Oeste)."
+      ]
+    },
+    {
+      "tag": "localizacao_vila_feminina_masculina",
+      "patterns": [
+        "Onde fica a vila feminina?",
+        "Como chegar na vila feminina?",
+        "Onde fica a vila masculina?",
+        "Como chegar na vila masculina?",
+        "Moradia estudantil",
+        "Alojamento"
+      ],
+      "responses": [
+        "As moradias estudantis ficam no Lado Oeste. A Vila Feminina é o prédio nº 7 e a Vila Masculina é o prédio nº 18 no mapa."
+      ],
+      "image": "Mapa-UFERSA-Mossoró_Oeste_2017.jpg"
     },
     {
       "tag": "fallback",
       "patterns": [],
       "responses": [
-        "Desculpe, não entendi sua pergunta. Você pode tentar perguntar de outra forma. Por exemplo: 'Como funciona a avaliação?' ou 'Quais auxílios para estudantes existem?'.",
+        "Desculpe, não entendi sua pergunta. Você pode tentar perguntar de outra forma. Por exemplo: 'Como funciona a avaliação?' ou 'Onde fica a biblioteca?'.",
         "Hmmm... não tenho certeza se entendi. Poderia reformular? Estou aqui para ajudar com dúvidas sobre matrícula, bolsas, RU, TCC, biblioteca e outros assuntos da vida acadêmica na UFERSA."
       ]
     }
