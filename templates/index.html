@@ -25,7 +25,6 @@
     .message a { color: #004085; text-decoration: underline; }
     .message img { width: 100%; border-radius: 10px; margin-top: 10px; cursor: pointer; transition: transform 0.2s; }
     .message img:hover { transform: scale(1.02); }
-    /* Estilos para as sugestões dentro da mensagem do bot */
     .suggestions { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
     .suggestion { background-color: #ffffff; border: 1px solid #0052a1; color: #0052a1; padding: 8px 12px; border-radius: 15px; font-size: 14px; cursor: pointer; transition: background-color 0.2s; text-align: center; }
     .suggestion:hover { background-color: #e4f0fb; }
@@ -64,7 +63,6 @@
         return text.replace(urlRegex, url => `<a href="${url}" target="_blank">${url}</a>`);
     }
 
-    // --- FUNÇÃO MODIFICADA ---
     function addMessage(text, sender, imageUrls = [], suggestions = []) {
         const chatbox = document.getElementById('chatbox');
         const messageDiv = document.createElement('div');
@@ -80,15 +78,12 @@
             });
         }
 
-        // --- NOVA LÓGICA PARA CRIAR AS SUGESTÕES ---
         if (suggestions && suggestions.length > 0) {
             suggestionsHtml += '<div class="suggestions">';
-            // Adiciona um pequeno texto introdutório
             if (sender === 'bot') {
                  suggestionsHtml += '<div style="font-size: 14px; margin-bottom: 5px; color: #555;">Talvez você queira perguntar:</div>';
             }
             suggestions.forEach(suggestionText => {
-                // Usamos aspas simples dentro do onclick para o texto
                 suggestionsHtml += `<div class="suggestion" onclick="sendMessage('${suggestionText}')">${suggestionText}</div>`;
             });
             suggestionsHtml += '</div>';
@@ -99,7 +94,6 @@
         chatbox.scrollTop = chatbox.scrollHeight;
     }
 
-    // --- FUNÇÃO MODIFICADA ---
     async function sendMessage(text = null) {
         const textInput = document.getElementById('textInput');
         const userText = text || textInput.value.trim();
@@ -121,12 +115,10 @@
 
         thinkingMessage.remove();
 
-        // Pega o texto, a lista de imagens e a nova lista de sugestões
         const botResponse = data.answer;
         const imageUrls = data.images;
         const suggestions = data.suggestions;
 
-        // Passa a lista de sugestões para a função addMessage
         addMessage(botResponse, 'bot', imageUrls, suggestions);
     }
 
@@ -144,8 +136,7 @@
     document.getElementById('textInput').addEventListener('keypress', e => {
         if (e.key === 'Enter') sendMessage();
     });
-
-    // Removido o event listener das sugestões iniciais, pois agora são geradas dinamicamente.
+    
     window.onload = () => {
         document.getElementById('textInput').focus();
     };

@@ -10,7 +10,6 @@ from unidecode import unidecode
 
 app = Flask(__name__)
 
-# --- Garantir que os pacotes NLTK estão baixados ---
 try:
     nltk.data.find('corpora/stopwords')
     nltk.data.find('tokenizers/punkt')
@@ -21,7 +20,6 @@ except nltk.downloader.DownloadError as e:
     nltk.download('punkt')
     nltk.download('rslp')
 
-# --- CARREGAR RECURSOS DO CHATBOT (feito uma vez ao iniciar) ---
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 with open('vectorizer.pkl', 'rb') as f:
@@ -42,7 +40,6 @@ def preprocess(text):
     return ' '.join(tokens)
 
 
-# --- NOVA FUNÇÃO PARA ENCONTRAR SUGESTÕES INTELIGENTES ---
 def find_suggestions(user_input, intents_data):
     processed_input_tokens = set(preprocess(user_input).split())
     if not processed_input_tokens:
@@ -50,15 +47,12 @@ def find_suggestions(user_input, intents_data):
 
     intent_scores = {}
     for intent in intents_data['intents']:
-        # Ignorar tags que não são boas para sugestão
         if intent['tag'] in ['fallback', 'boas_vindas', 'agradecimento']:
             continue
 
-        # Junta todos os patterns de uma tag em um texto só para comparar
         all_patterns_text = " ".join(intent['patterns'])
         processed_patterns_tokens = set(preprocess(all_patterns_text).split())
 
-        # Calcula a pontuação baseada nas palavras em comum
         common_tokens = processed_input_tokens.intersection(processed_patterns_tokens)
         score = len(common_tokens)
 
@@ -68,14 +62,11 @@ def find_suggestions(user_input, intents_data):
     if not intent_scores:
         return []
 
-    # Ordena as tags pela maior pontuação para encontrar a melhor
     sorted_intents = sorted(intent_scores.items(), key=lambda item: item[1], reverse=True)
     best_tag = sorted_intents[0][0]
 
-    # Encontra os patterns da melhor tag para sugerir ao usuário
     for intent in intents_data['intents']:
         if intent['tag'] == best_tag:
-            # Retorna até 3 exemplos aleatórios dos patterns
             return random.sample(intent['patterns'], min(3, len(intent['patterns'])))
 
     return []
@@ -88,7 +79,6 @@ def get_response_from_tag(tag, intents_data):
             images = intent.get('image', [])
             if not isinstance(images, list):
                 images = [images]
-            # Adiciona uma lista vazia de sugestões para respostas normais
             return {"answer": response_text, "images": images, "suggestions": []}
 
     fallback_response = random.choice([i for i in intents_data['intents'] if i['tag'] == 'fallback'][0]['responses'])
@@ -109,20 +99,15 @@ def chatbot_response(user_input):
     max_score = max(scores)
     CONFIDENCE_THRESHOLD = 0.2
 
-    # --- LÓGICA DE FALLBACK MODIFICADA ---
     if max_score < CONFIDENCE_THRESHOLD:
-        # Se a confiança for baixa, busca por sugestões
         suggestions = find_suggestions(user_input, data)
         fallback_message = random.choice([i for i in data['intents'] if i['tag'] == 'fallback'][0]['responses'])
-        # Retorna a mensagem de erro E a lista de sugestões
         return {"answer": fallback_message, "images": [], "suggestions": suggestions}
     else:
-        # Se a confiança for alta, responde normalmente
         predicted_tag = model.predict(vectorized_input)[0]
         return get_response_from_tag(predicted_tag, data)
 
 
-# --- ROTAS DO SITE (sem alteração) ---
 @app.route("/")
 def home():
     return render_template("index.html")
