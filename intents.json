@@ -34,6 +34,8 @@
         "Qual o objetivo da UFERSA?",
         "Para que serve a UFERSA?",
         "O que a UFERSA faz?",
+        "ufersa",
+        "UFERSA",
         "Fale sobre a missão da universidade"
       ],
       "responses": [
@@ -49,6 +51,9 @@
         "Onde fica a UFERSA?",
         "Quais as cidades que tem ufersa?",
         "Quantos campus existem?",
+        "Como chego na UFERSA?",
+        "Chegar na UFERSA",
+        "Ir a UFERSA",
         "Fale sobre os campus"
       ],
       "responses": [
@@ -84,7 +89,7 @@
         "portal do discente"
       ],
       "responses": [
-        "O SIGAA é o sistema acadêmico onde você pode acessar notas, emitir histórico e declaração de vínculo, realizar sua matrícula a cada semestre, acessar turmas virtuais e muito mais. O acesso é pelo link: https://sigaa.ufersa.edu.br/sigaa/verTelaLogin.do. A matrícula para calouros é automática no primeiro semestre."
+        "O SIGAA é o sistema acadêmico onde você pode acessar notas, emitir histórico e declaração de vínculo, realizar sua matrícula a cada semestre, acessar turmas virtuais e muito mais. O acesso é pelo link: https://sigaa.ufersa.edu.br/sigaa/verTelaLogin.do A matrícula para calouros é automática no primeiro semestre."
       ]
     },
     {
@@ -191,6 +196,8 @@
         "Precisa de quanto para passar de ano?",
         "Cálculo da média final",
         "fui para a final, como funciona?",
+        "Notas",
+        "Nota",
         "Média"
       ],
       "responses": [
@@ -243,6 +250,7 @@
         "auxílio alimentação",
         "auxílio transporte",
         "ajuda de custo para estudantes",
+        "PROAE",
         "sou de baixa renda, preciso de ajuda"
       ],
       "responses": [
@@ -259,6 +267,8 @@
         "bandejão",
         "quanto custa o almoço no ru?",
         "horário do RU",
+        "O que é o RU?",
+        "Sobre o RU",
         "como faço a carteirinha do RU?"
       ],
       "responses": [
@@ -341,6 +351,8 @@
         "como conseguir um estágio?",
         "a faculdade ajuda a arrumar estágio?",
         "horas de estágio",
+        "sobre estágio",
+        "informação de estágio",
         "validar estágio"
       ],
       "responses": [
@@ -389,6 +401,7 @@
         "Muito obrigado",
         "Agradecido",
         "Show, valeu!",
+        "Show",
         "Entendi",
         "Entendido",
         "Entendi, obrigado",
@@ -456,6 +469,7 @@
         "Onde fica o RU?",
         "Como chego no RU?",
         "Local do RU",
+        "Area do RU",
         "Onde é o Restaurante Universitário?",
         "Como chego no bandejão?",
         "Localização do RU",
@@ -500,8 +514,10 @@
       "responses": [
         "Existem várias Centrais de Aulas! No Lado Leste, você encontra as centrais III (nº 16), IV (nº 12), V (nº 26), VI (nº 20) e VII (nº 18). Já no Lado Oeste, ficam a Central de Aulas I (nº 8) e a II (nº 15). Verifique no seu horário qual é a sua."
       ],
-      "image": "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg",
-      "image": "Mapa-UFERSA-Mossoró_Oeste_2017.jpg"
+      "image": [
+        "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg",
+        "Mapa-UFERSA-Mossoró_Oeste_2017.jpg"
+      ]
     },
     {
       "tag": "localizacao_dcv",
@@ -568,6 +584,10 @@
       ],
       "responses": [
         "Existem duas entradas principais. A Guarita Leste (nº 31 no mapa do Lado Leste) e a Guarita Oeste (próxima ao prédio 11 no mapa do Lado Oeste)."
+      ],
+      "image": [
+        "Mapa-UFERSA-Mossoró_Leste_2017-1.jpg",
+        "Mapa-UFERSA-Mossoró_Oeste_2017.jpg"
       ]
     },
     {
@@ -588,7 +608,12 @@
     {
       "tag": "ufersa_app",
       "patterns": [
-        "O que é o UfersaApp?",
+        "O que é o UFERSApp?",
+        "UFERSApp",
+        "UFERSAApp",
+        "Aplicativo",
+        "Aplicação",
+        "Mobile",
         "Como usar o app da UFERSA?",
         "Tem aplicativo da universidade?",
         "Baixar app da UFERSA",
@@ -599,13 +624,17 @@
         "IOS"
       ],
       "responses": [
-        "O UfersaApp é o aplicativo oficial da UFERSA para dispositivos móveis. Ele permite acesso rápido a informações acadêmicas, como horários de aula, notas, frequência e avisos. Você pode baixá-lo gratuitamente na Play Store ou App Store procurando por 'UfersaApp'."
+        "O UFERSApp é o aplicativo oficial da UFERSA para dispositivos móveis. Ele permite acesso rápido a informações acadêmicas, como horários de aula, notas, frequência e avisos. Você pode baixá-lo gratuitamente na Play Store ou App Store procurando por 'UfersaApp'."
       ]
     },
     {
       "tag": "reposicao",
       "patterns": [
         "Faltei a prova, e agora?",
+        "Faltei a prova",
+        "Não fiz uma prova",
+        "Esqueci de fazer uma prova",
+        "Não fui fazer uma prova",
         "Como funciona a reposição de prova?",
         "Perdi a avaliação",
         "Tem como repor uma prova?",
@@ -643,6 +672,7 @@
       "tag": "horas_complementares",
       "patterns": [
         "O que são horas complementares?",
+        "complementares",
         "Quantas horas complementares preciso?",
         "Como conseguir horas complementares?",
         "Atividades complementares",
@@ -652,6 +682,22 @@
     ],
       "responses": [
         "Horas complementares são atividades extracurriculares obrigatórias para a conclusão do curso. Você pode acumulá-las com eventos, cursos, palestras, monitoria, estágios, entre outros. A quantidade exigida varia por curso e pode ser consultada na coordenação. A solicitação de validação é feita no SIGAA, com envio dos comprovantes."
+    ]
+    },
+        {
+      "tag": "copa_labcomp",
+      "patterns": [
+        "Copa labcomp?",
+        "FIFA",
+        "EA FC",
+        "EA",
+        "O que é a copa labcomp?",
+        "lab comp",
+        "Como funciona o labcomp?",
+        "Copa"
+    ],
+      "responses": [
+        "A copa labcomp ocorre desde 2025 no LCC, a copa visa realçar as habilidades dos alunos de computação no EA FC. Atualmente estamos na primeira edição."
     ]
     },
     {

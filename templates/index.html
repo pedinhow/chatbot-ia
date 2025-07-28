@@ -6,263 +6,150 @@
   <title>Chatbot UFERSA</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(120deg, #0052a1, #28b0aa);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .chat-container {
-      width: 100%;
-      max-width: 420px;
-      height: 90vh;
-      background-color: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-
-    #chatbox {
-      flex: 1;
-      padding: 20px;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      background-color: #f9f9f9;
-    }
-
-    .message {
-      max-width: 85%;
-      padding: 12px 18px;
-      border-radius: 18px;
-      line-height: 1.5;
-      position: relative;
-      opacity: 0;
-      animation: fadeIn 0.4s forwards;
-    }
-
-    .bot-message {
-      background-color: #e4f0fb;
-      color: #0d2b4f;
-      align-self: flex-start;
-      border-bottom-left-radius: 0;
-    }
-
-    .user-message {
-      background-color: #0052a1;
-      color: #fff;
-      align-self: flex-end;
-      border-bottom-right-radius: 0;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    .input-container {
-      display: flex;
-      padding: 12px;
-      background-color: #ffffff;
-      border-top: 1px solid #ddd;
-    }
-
-    #textInput {
-      flex: 1;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      padding: 10px 15px;
-      font-size: 15px;
-    }
-
-    #sendButton {
-      border: none;
-      background-color: #0052a1;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 20px;
-      margin-left: 10px;
-      cursor: pointer;
-      font-weight: 600;
-    }
-
-    .message a {
-      color: #004085;
-      text-decoration: underline;
-    }
-
-    .message img {
-      width: 100%;
-      border-radius: 10px;
-      margin-top: 10px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .message img:hover {
-      transform: scale(1.02);
-    }
-
-    .suggestions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .suggestion {
-      background-color: #f1f1f1;
-      padding: 8px 12px;
-      border-radius: 15px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-
-    .suggestion:hover {
-      background-color: #e0e0e0;
-    }
-
-    /* Modal de imagem */
-    .image-modal {
-      display: none;
-      position: fixed;
-      z-index: 999;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .image-modal img {
-      max-width: 90%;
-      max-height: 85%;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-    }
-
-    .image-modal .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 36px;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .image-modal .close-btn:hover {
-      color: #ccc;
-    }
+    body { margin: 0; font-family: 'Inter', sans-serif; background: linear-gradient(120deg, #0052a1, #28b0aa); display: flex; justify-content: center; align-items: center; height: 100vh; }
+    .chat-container { width: 100%; max-width: 460px; height: 94vh; background-color: #ffffff; border-radius: 20px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); display: flex; flex-direction: column; overflow: hidden; }
+    .chat-header { background-color: #0052a1; color: white; padding: 12px 16px; display: flex; align-items: center; gap: 12px; }
+    .chat-header img { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; }
+    .chat-header .info { display: flex; flex-direction: column; }
+    .chat-header .info .name { font-weight: 600; font-size: 16px; }
+    .chat-header .info .status { font-size: 13px; color: #c0ffc5; display: flex; align-items: center; }
+    .chat-header .info .status::before { content: ''; width: 8px; height: 8px; background-color: #00ff47; border-radius: 50%; margin-right: 6px; }
+    #chatbox { flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 14px; background-color: #f9f9f9; }
+    .message { max-width: 85%; padding: 12px 18px; border-radius: 18px; line-height: 1.5; position: relative; opacity: 0; animation: fadeIn 0.4s forwards; overflow-wrap: break-word; word-wrap: break-word; }
+    .bot-message { background-color: #e4f0fb; color: #0d2b4f; align-self: flex-start; border-bottom-left-radius: 0; }
+    .user-message { background-color: #0052a1; color: #fff; align-self: flex-end; border-bottom-right-radius: 0; }
+    @keyframes fadeIn { to { opacity: 1; } }
+    .input-container { display: flex; padding: 12px; background-color: #ffffff; border-top: 1px solid #ddd; }
+    #textInput { flex: 1; border: 1px solid #ccc; border-radius: 20px; padding: 12px 16px; font-size: 16px; }
+    #sendButton { border: none; background-color: #0052a1; color: white; padding: 10px 16px; border-radius: 20px; margin-left: 10px; cursor: pointer; font-weight: 600; }
+    .message a { color: #004085; text-decoration: underline; }
+    .message img { width: 100%; border-radius: 10px; margin-top: 10px; cursor: pointer; transition: transform 0.2s; }
+    .message img:hover { transform: scale(1.02); }
+    /* Estilos para as sugestões dentro da mensagem do bot */
+    .suggestions { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+    .suggestion { background-color: #ffffff; border: 1px solid #0052a1; color: #0052a1; padding: 8px 12px; border-radius: 15px; font-size: 14px; cursor: pointer; transition: background-color 0.2s; text-align: center; }
+    .suggestion:hover { background-color: #e4f0fb; }
+    .image-modal { display: none; position: fixed; z-index: 999; top: 0; left: 0; height: 100%; width: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; }
+    .image-modal img { max-width: 90%; max-height: 85%; border-radius: 12px; box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); }
+    .image-modal .close-btn { position: absolute; top: 20px; right: 30px; font-size: 36px; color: white; cursor: pointer; font-weight: bold; }
   </style>
 </head>
 <body>
 
-  <div class="chat-container">
-    <div id="chatbox">
-      <div class="message bot-message">👋 Olá! Sou o chatbot da UFERSA. Como posso te ajudar?</div>
-
-      <div class="suggestions">
-        <div class="suggestion">Como funciona o RU?</div>
-        <div class="suggestion">Como faço matrícula nas disciplinas?</div>
-        <div class="suggestion">O que é TCC?</div>
-      </div>
-    </div>
-
-    <div class="input-container">
-      <input id="textInput" type="text" placeholder="Digite sua mensagem..." autocomplete="off" />
-      <button id="sendButton">Enviar</button>
+<div class="chat-container">
+  <div class="chat-header">
+    <img src="/static/ufersa-icon.png" alt="Logo UFERSA">
+    <div class="info">
+      <div class="name">ChatBot UFERSA</div>
+      <div class="status">Online</div>
     </div>
   </div>
-
-  <!-- Modal para imagem ampliada -->
-  <div class="image-modal" id="imageModal" onclick="closeImageModal()">
-    <span class="close-btn" onclick="closeImageModal()">&times;</span>
-    <img id="modalImage" src="" alt="Imagem ampliada" />
+  <div id="chatbox">
+    <div class="message bot-message">👋 Olá! Sou o chatbot da UFERSA. Como posso te ajudar?</div>
   </div>
+  <div class="input-container">
+    <input id="textInput" type="text" placeholder="Digite sua mensagem..." autocomplete="off" />
+    <button id="sendButton">Enviar</button>
+  </div>
+</div>
 
-  <script>
+<div class="image-modal" id="imageModal" onclick="closeImageModal()">
+  <span class="close-btn" onclick="closeImageModal()">&times;</span>
+  <img id="modalImage" src="" alt="Imagem ampliada" />
+</div>
+
+<script>
     function linkify(text) {
-      const urlRegex = /(https?:\/\/[^\s]+)/g;
-      return text.replace(urlRegex, url => `<a href="${url}" target="_blank">${url}</a>`);
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        return text.replace(urlRegex, url => `<a href="${url}" target="_blank">${url}</a>`);
     }
 
-    function addMessage(text, sender, imageUrl = null) {
-      const chatbox = document.getElementById('chatbox');
-      const messageDiv = document.createElement('div');
-      messageDiv.classList.add('message', `${sender}-message`);
+    // --- FUNÇÃO MODIFICADA ---
+    function addMessage(text, sender, imageUrls = [], suggestions = []) {
+        const chatbox = document.getElementById('chatbox');
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', `${sender}-message`);
 
-      let processedText = linkify(text).replace(/\n/g, '<br>');
-      if (imageUrl) {
-        processedText += `<img src="/static/${imageUrl}" alt="Imagem" onclick="openImageModal('/static/${imageUrl}')" />`;
-      }
+        let processedText = linkify(text).replace(/\n/g, '<br>');
+        let imagesHtml = '';
+        let suggestionsHtml = '';
 
-      messageDiv.innerHTML = processedText;
-      chatbox.appendChild(messageDiv);
-      chatbox.scrollTop = chatbox.scrollHeight;
+        if (imageUrls && imageUrls.length > 0) {
+            imageUrls.forEach(url => {
+                imagesHtml += `<img src="/static/${url}" alt="Mapa do Campus" onclick="openImageModal('/static/${url}')" />`;
+            });
+        }
+
+        // --- NOVA LÓGICA PARA CRIAR AS SUGESTÕES ---
+        if (suggestions && suggestions.length > 0) {
+            suggestionsHtml += '<div class="suggestions">';
+            // Adiciona um pequeno texto introdutório
+            if (sender === 'bot') {
+                 suggestionsHtml += '<div style="font-size: 14px; margin-bottom: 5px; color: #555;">Talvez você queira perguntar:</div>';
+            }
+            suggestions.forEach(suggestionText => {
+                // Usamos aspas simples dentro do onclick para o texto
+                suggestionsHtml += `<div class="suggestion" onclick="sendMessage('${suggestionText}')">${suggestionText}</div>`;
+            });
+            suggestionsHtml += '</div>';
+        }
+
+        messageDiv.innerHTML = processedText + imagesHtml + suggestionsHtml;
+        chatbox.appendChild(messageDiv);
+        chatbox.scrollTop = chatbox.scrollHeight;
     }
 
+    // --- FUNÇÃO MODIFICADA ---
     async function sendMessage(text = null) {
-      const textInput = document.getElementById('textInput');
-      const userText = text || textInput.value.trim();
+        const textInput = document.getElementById('textInput');
+        const userText = text || textInput.value.trim();
 
-      if (!userText) return;
+        if (!userText) return;
 
-      addMessage(userText, 'user');
-      textInput.value = '';
-      textInput.focus();
+        addMessage(userText, 'user');
+        textInput.value = '';
+        textInput.focus();
 
-      const thinkingMessage = document.createElement('div');
-      thinkingMessage.classList.add('message', 'bot-message');
-      thinkingMessage.innerHTML = 'Digitando...';
-      document.getElementById('chatbox').appendChild(thinkingMessage);
-      document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
+        const thinkingMessage = document.createElement('div');
+        thinkingMessage.classList.add('message', 'bot-message');
+        thinkingMessage.innerHTML = 'Digitando...';
+        document.getElementById('chatbox').appendChild(thinkingMessage);
+        document.getElementById('chatbox').scrollTop = document.getElementById('chatbox').scrollHeight;
 
-      const response = await fetch(`/get?msg=${encodeURIComponent(userText)}`);
-      const data = await response.json();
+        const response = await fetch(`/get?msg=${encodeURIComponent(userText)}`);
+        const data = await response.json();
 
-      thinkingMessage.remove();
+        thinkingMessage.remove();
 
-      const botResponse = data.answer;
-      const imageUrl = data.image;
-      addMessage(botResponse, 'bot', imageUrl);
+        // Pega o texto, a lista de imagens e a nova lista de sugestões
+        const botResponse = data.answer;
+        const imageUrls = data.images;
+        const suggestions = data.suggestions;
+
+        // Passa a lista de sugestões para a função addMessage
+        addMessage(botResponse, 'bot', imageUrls, suggestions);
     }
 
     function openImageModal(src) {
-      const modal = document.getElementById('imageModal');
-      const modalImg = document.getElementById('modalImage');
-      modal.style.display = 'flex';
-      modalImg.src = src;
+        document.getElementById('imageModal').style.display = 'flex';
+        document.getElementById('modalImage').src = src;
     }
 
     function closeImageModal() {
-      document.getElementById('imageModal').style.display = 'none';
-      document.getElementById('modalImage').src = '';
+        document.getElementById('imageModal').style.display = 'none';
+        document.getElementById('modalImage').src = '';
     }
 
     document.getElementById('sendButton').addEventListener('click', () => sendMessage());
     document.getElementById('textInput').addEventListener('keypress', e => {
-      if (e.key === 'Enter') sendMessage();
+        if (e.key === 'Enter') sendMessage();
     });
 
-    document.querySelectorAll('.suggestion').forEach(item => {
-      item.addEventListener('click', () => sendMessage(item.textContent));
-    });
-
+    // Removido o event listener das sugestões iniciais, pois agora são geradas dinamicamente.
     window.onload = () => {
-      document.getElementById('textInput').focus();
+        document.getElementById('textInput').focus();
     };
-  </script>
+</script>
+
 </body>
 </html>
