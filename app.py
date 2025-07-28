@@ -7,6 +7,7 @@ import random
 from nltk.stem import RSLPStemmer
 from nltk.corpus import stopwords
 from unidecode import unidecode
+from datetime import datetime
 
 app = Flask(__name__)
 
@@ -14,12 +15,12 @@ try:
     nltk.data.find('corpora/stopwords')
     nltk.data.find('tokenizers/punkt')
     nltk.data.find('stemmers/rslp')
-except nltk.downloader.DownloadError as e:
-    print(f"Erro ao encontrar pacotes NLTK, tentando baixar: {e}")
+except nltk.downloader.DownloadError:
     nltk.download('stopwords')
     nltk.download('punkt')
     nltk.download('rslp')
 
+# --- CARREGAR RECURSOS DO CHATBOT ---
 with open('model.pkl', 'rb') as f:
     model = pickle.load(f)
 with open('vectorizer.pkl', 'rb') as f:
@@ -42,33 +43,21 @@ def preprocess(text):
 
 def find_suggestions(user_input, intents_data):
     processed_input_tokens = set(preprocess(user_input).split())
-    if not processed_input_tokens:
-        return []
-
+    if not processed_input_tokens: return []
     intent_scores = {}
     for intent in intents_data['intents']:
-        if intent['tag'] in ['fallback', 'boas_vindas', 'agradecimento']:
-            continue
-
+        if intent['tag'] in ['fallback', 'boas_vindas', 'agradecimento']: continue
         all_patterns_text = " ".join(intent['patterns'])
         processed_patterns_tokens = set(preprocess(all_patterns_text).split())
-
         common_tokens = processed_input_tokens.intersection(processed_patterns_tokens)
         score = len(common_tokens)
-
-        if score > 0:
-            intent_scores[intent['tag']] = score
-
-    if not intent_scores:
-        return []
-
+        if score > 0: intent_scores[intent['tag']] = score
+    if not intent_scores: return []
     sorted_intents = sorted(intent_scores.items(), key=lambda item: item[1], reverse=True)
     best_tag = sorted_intents[0][0]
-
     for intent in intents_data['intents']:
         if intent['tag'] == best_tag:
             return random.sample(intent['patterns'], min(3, len(intent['patterns'])))
-
     return []
 
 
@@ -77,10 +66,8 @@ def get_response_from_tag(tag, intents_data):
         if intent['tag'] == tag:
             response_text = random.choice(intent['responses'])
             images = intent.get('image', [])
-            if not isinstance(images, list):
-                images = [images]
+            if not isinstance(images, list): images = [images]
             return {"answer": response_text, "images": images, "suggestions": []}
-
     fallback_response = random.choice([i for i in intents_data['intents'] if i['tag'] == 'fallback'][0]['responses'])
     return {"answer": fallback_response, "images": [], "suggestions": []}
 
@@ -88,7 +75,16 @@ def get_response_from_tag(tag, intents_data):
 def chatbot_response(user_input):
     saudacoes_simples = ["oi", "ola", "olá", "e aí", "eae", "bom dia", "boa tarde", "boa noite"]
     if user_input.lower() in saudacoes_simples:
-        return get_response_from_tag('boas_vindas', data)
+        hora_atual = datetime.now().hour
+        if 5 <= hora_atual < 12:
+            saudacao = "Bom dia!"
+        elif 12 <= hora_atual < 18:
+            saudacao = "Boa tarde!"
+        else:
+            saudacao = "Boa noite!"
+
+        response_text = f"{saudacao} Seja bem-vindo(a) à UFERSA! Como posso te ajudar hoje?"
+        return {"answer": response_text, "images": [], "suggestions": []}
 
     processed_input = preprocess(user_input)
     if not processed_input:
@@ -99,12 +95,19 @@ def chatbot_response(user_input):
     max_score = max(scores)
     CONFIDENCE_THRESHOLD = 0.2
 
+    predicted_tag = model.predict(vectorized_input)[0]
+
+    if predicted_tag == "verificar_data_hora" and max_score >= CONFIDENCE_THRESHOLD:
+        agora = datetime.now()
+        # Formata a data e a hora em um formato amigável
+        resposta_formatada = agora.strftime("Agora são %H:%M de %d/%m/%Y.")
+        return {"answer": resposta_formatada, "images": [], "suggestions": []}
+
     if max_score < CONFIDENCE_THRESHOLD:
         suggestions = find_suggestions(user_input, data)
         fallback_message = random.choice([i for i in data['intents'] if i['tag'] == 'fallback'][0]['responses'])
         return {"answer": fallback_message, "images": [], "suggestions": suggestions}
     else:
-        predicted_tag = model.predict(vectorized_input)[0]
         return get_response_from_tag(predicted_tag, data)
 
 

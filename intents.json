@@ -669,6 +669,20 @@
       ]
     },
     {
+      "tag": "verificar_data_hora",
+      "patterns": [
+        "Que horas são?",
+        "Qual a data de hoje?",
+        "Me diga as horas",
+        "Poderia me dizer a data e a hora?",
+        "horas",
+        "data"
+      ],
+      "responses": [
+        ""
+      ]
+    },
+    {
       "tag": "horas_complementares",
       "patterns": [
         "O que são horas complementares?",
@@ -719,6 +733,7 @@
         "Você pode conferir o cardápio diário do Restaurante Universitário (RU) da UFERSA acessando o site oficial da PROAE: https://proae.ufersa.edu.br/cardapio. Outra opção prática é utilizar o UfersaApp, que também disponibiliza o cardápio atualizado todos os dias."
     ]
 },
+
     {
       "tag": "fallback",
       "patterns": [],
